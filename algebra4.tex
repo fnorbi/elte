@@ -2861,7 +2861,7 @@
 	
 	\section{Faktoriálisok számelmélete}
 	
-	Ebben a fejezetben fogjuk előkészíteni a Csebisev-tétel bizonyításához szükséges állításokat. Ezek többnyire az $n!$ vagy a binomiális együtthatók számelméletével kapcsolatosak lesznek, azokat próbálják becsülni, vagy prímtényezős alakjukat leírni.
+	Ebben a fejezetben fogjuk előkészíteni a Csebisev-tétel bizonyításához szükséges állításokat. Ezek többnyire az $n!$ vagy a binomiális együtthatók számelméletével lesznek kapcsolatosak, azokat próbálják becsülni, vagy prímtényezős alakjukat leírni.
 	
 	\textbf{Emlék: }
 	
@@ -2890,7 +2890,7 @@
 	\begin{proof}
 		Mit jelent az előbbiek alapján ${2n\choose n}$? A Pascal-háromszög $2n$-edik sorának $n$-edik elemét. Mivel $2n$ páros, így ebben a sorban páratlan sok elem van, ezek közül az $n$-edik éppen a középső.
 		
-		Nyilvánvalóan mivel nem az első sorról van szó, így a középső elemen kívül vannak más elemek is, tehát a vizsgált elem kisebb, mint a teljes sor összege, ami $2^{2n} = (2^2)^n = 4^n$. Ezzel a bizonyítandó jobboldalát meg is kaptuk: ${2n\choose n} < 4^n$.
+		Nyilvánvalóan mivel nem a nulladik sorról van szó, így a középső elemen kívül vannak más elemek is, tehát a vizsgált elem kisebb, mint a teljes sor összege, ami $2^{2n} = (2^2)^n = 4^n$. Ezzel a bizonyítandó jobboldalát meg is kaptuk: ${2n\choose n} < 4^n$.
 		
 		Hasonlóan meggondolható, hogy mivel a középső elem a legnagyobb, így az átlagnál biztosan nagyobb. Mennyi az átlag? Sorösszeg osztva a sorban lévő elemek számával. Mivel a $2n$-edik sort vizsgáljuk, itt $2n+1$ elem van, vagyis az átlag
 		\[ \dfrac{\text{sorösszeg}}{\text{elemszám}} = \dfrac{4^n}{2n+1} < {2n\choose n}  \]
@@ -2902,7 +2902,7 @@
 	\end{theo}
 
 	\begin{proof}
-		Hasonlóan az előzőhöz, csak most a $2n+1$-edik sor $n$-edik elemét vizsgáljuk. Páratlan sorszámot viselő sorban páros sok elem található, itt most $2n+2$, ezek közül a középső $2$ egyforma, melyek egyike az $n$-edik. Tehát hasonlóan csinálhatjuk a becsléseket. Az átlagnál most is nagyobb ez az elem, viszont mivel van egy ,,párja'' akivel megegyezik az értéke (ez ${2n+1\choose n+1}$ lesz), így a sorösszeg felénél is kisebb:
+		Most a $2n+1$-edik sor $n$-edik elemét vizsgáljuk. Páratlan sorszámot viselő sorban páros sok elem található, itt most $2n+2$, ezek közül a középső $2$ egyforma, melyek egyike az $n$-edik. Tehát hasonlóan csinálhatjuk a becsléseket. Az átlagnál most is nagyobb ez az elem, viszont mivel van egy ,,párja'' akivel megegyezik az értéke (ez ${2n+1\choose n+1}$ lesz), így a sorösszeg felénél is kisebb:
 		\[ \dfrac{2^{2n+1}}{2n+2} = \text{átlag} < {2n+1\choose n} < \text{sorösszeg fele} = \dfrac{2^{2n+1}}{2} = 2^{2n} = 4^n \]
 	\end{proof}
 
@@ -2913,7 +2913,7 @@
 		
 		Tudjuk jól, hogy $15! = 15\cdot 14\cdot \ldots \cdot 2\cdot 1$, így a kanonikus alak minden prímtényezője legfeljebb $15$ lehet, így a szóba jöhető prímek: $2, 3, 5, 7, 11, 13$. Mivel $13$ csak a $13$ és $11$ csak a $11$ miatt került bele a szorzatba, így ők csak első hatványon szerepelnek.
 		
-		A $7$ már a $7$ és a $14$ miatt is benne van. Általánosan annyi számban szerepel egy adott prím, ahány az adott prímmel osztható szám van $15$-ig, tehát $\left \lfloor \dfrac{15}{7} \right \rfloor = 2$.
+		A $7$ már a $7$ és a $14$ miatt is benne van. Általánosan annyi számban szerepel egy adott $p$ prím, ahány szám osztható $15$-ig $p$-vel, tehát $\left \lfloor \dfrac{15}{7} \right \rfloor = 2$.
 		
 		Hasonló az $5$ esete is: $\left \lfloor \dfrac{15}{5} \right \rfloor = 3$
 		
@@ -2926,14 +2926,14 @@
 		\[ 15! = 1307674368000 = 2^{11} \cdot 3^6 \cdot 5^3 \cdot 7^2 \cdot 11^1 \cdot 13^1  \]
 	\end{pl}
 
-	Nézzük meg mit mondhatunk általánosan!
+	Mindez általánosan is megfogalmazható!
 
 	\begin{theo}\label{faktkan}
 		Az $n!$ kanonikus alakja: $ \displaystyle n! = \prod\limits_{\substack{p\leq n \\  p\text{ prím}}} p^\alpha$ ahol $\displaystyle \alpha = \sum\limits_{\substack{p^i\leq n \\ p^{i+1}>n}} \left \lfloor \dfrac{n}{p^i} \right \rfloor$
 	\end{theo}
 
 	\begin{proof}
-		Az előző példa után nyilvánvaló ez a tétel. Legfeljebb $n$ lehet minden $p$ prímtényező értéke, továbbá először megnézzük hány olyan szám van, amik $1$-gyel növelik a végső kitevőt, majd hány ami $2$-vel (azaz még további $1$-gyel), stb... Ezt addig csináljuk, amíg a nevezőben lévő prímhatvány legfeljebb $n$, hiszen vele osztjuk el $n$-et és ha $n$-nél nagyobb számmal osztanánk $1$-nél kisebbet kapnánk, aminek egészrésze $0$, tehát elegendő addig menni, amíg $p^i\leq n$, hiszen utána már csak $0$-kat adogatnánk össze.
+		Az előző példa után nyilvánvaló ez a tétel. Legfeljebb $n$ lehet minden $p$ prímtényező értéke, továbbá először megnézzük hány olyan szám van, amik $1$-gyel növelik a végső kitevőt, majd hány ami $2$-vel (azaz még további $1$-gyel), stb... Ezt addig csináljuk, amíg a nevezőben lévő prímhatvány legfeljebb $n$, hiszen vele osztjuk el $n$-et és ha $n$-nél nagyobb számmal osztanánk, $1$-nél kisebbet kapnánk, aminek egészrésze $0$, tehát elegendő addig menni, amíg $p^i\leq n$, hiszen utána már csak $0$-kat adogatnánk össze.
 	\end{proof}
 
 	\begin{theo}\label{primekszorzata}
@@ -2945,7 +2945,7 @@
 		\[ \prod_{p\leq x} p < 4^{x-1}  \]
 		csupán azért szerepel a tételben $x$ kitevővel, mert későbbiekben nekünk azt elegendő lesz használnunk a Csebisev bizonyításához.
 		
-		Az első hasznos észrevételünk, hogy elegendő $x\geq 2$-vel foglalkoznunk, különben a baloldali szorzat $0$ (hiszen 2 alatti pozitív prímszám nincs), a $4^x$ exponenciális függvényre pedig valóban alsó korlát a $0$. Látható, hogy $x=2$ és $x=3$ esetén is igaz:
+		Az első hasznos észrevételünk, hogy elegendő $x\geq 2$-vel foglalkoznunk, különben a baloldali szorzat $0$ (hiszen 2 alatti pozitív prímszám nincs), a $4^x$ exponenciális függvényre pedig valóban alsó korlát a $0$. Látható továbbá, hogy $x=2$ és $x=3$ esetén is igaz:
 		\[ x=2: \hspace{4mm} 2 < 4^1 \hspace{8mm} \text{és} \hspace{8mm} x=3: \hspace{4mm} 2\cdot 3 = 6 < 4^2  \]
 		innentől tehát $x\geq 4$.
 		
@@ -2959,7 +2959,7 @@
 		\[ < 4^{n} \cdot  \prod_{n+1 < p\leq 2n+1} p  \]
 		Mit kezdjünk a másodikkal? Tekintsük a következő binomiális együtthatót:
 		\[ {2n+1\choose n} = \dfrac{(2n+1)!}{n!\cdot (n+1)!} = \dfrac{(2n+1)\cdot \ldots \cdot (n+2)\cdot (n+1)\cdot \ldots \cdot 2\cdot 1}{n! \cdot (n+1) \cdot \ldots \cdot 2 \cdot 1} = \dfrac{(2n+1)\cdot \ldots \cdot (n+2)}{n!}  \]
-		Látható, hogy az összes olyan prím, melyek szorzatát vesszük, tehát $n+1<p\leq 2n+1$ az megtalálható a kapott tört számlálójában, de a nevezőjében nem (hiszen ha $n+1$-nél nagyobb $p$, akkor $n$-nél is), így nem ,,egyszerűsödik ki'', ami azt jelenti, hogy ezen prím szorzata felülről becsülhető ${2n+1\choose n}$ értékével. Most ott tartunk tehát a becslésekben, hogy
+		Látható, hogy az összes olyan prím, melyek szorzatát vesszük, tehát $n+1<p\leq 2n+1$ az megtalálható a kapott tört számlálójában, de a nevezőjében nem (hiszen ha $n+1$-nél nagyobb $p$, akkor $n$-nél is), így nem ,,egyszerűsödik ki'', ami azt jelenti, hogy ezen prímek szorzata felülről becsülhető ${2n+1\choose n}$ értékével. Most ott tartunk tehát a becslésekben, hogy
 		\[ \prod_{p\leq 2n+1} p < 4^n \cdot {2n+1\choose n} \stackrel{\text{\ref{2n+1choosen}. tétel}}{<} 4^n \cdot 4^n = 4^{2n} = 4^{x-1} \]
 		Ezzel beláttuk a tételt.
 	\end{proof}
@@ -2967,23 +2967,27 @@
 	A következő tétel lesz az utolsó amire szükségünk lesz, ez azt mondja, hogy ${2n\choose n}$ prímfelbontásában a prímhatványok ,,kicsik'', olyan értelemben, hogy legfeljebb $2n$ lehet bármelyik.
 
 	\begin{theo}\label{otodik}
-		Amennyiben $n\geq 1$ akkor ${2n\choose n} = \prod p^{\alpha}$ esetén $p^{\alpha} \leq 2n$.
+		Amennyiben $n\geq 1$ akkor ${2n\choose n} = \displaystyle\prod p^{\alpha}$ esetén $p^{\alpha} \leq 2n$.
 	\end{theo}
 
 	\begin{proof}
 		Írjuk fel definíció szerint a binomiális együtthatót:
-		\[ {2n\choose n} = \dfrac{(2n)!}{(n!)!}  \]
+		\[ {2n\choose n} = \dfrac{(2n)!}{(n!)^2}  \]
 		Használjuk a \ref{faktkan}. tételben megszerzett tudásunkat és írjuk fel a számláló és a nevező kanonikus alakját. Egy adott $p$ prímszám esetén ha annak $(2n)!$ kanonikus alakjában a kitevője $\alpha$, valamint $n!$ esetén $\beta$, akkor végül $\alpha-2\beta$ lesz a kitevő a hatványozás szabályai szerint. Tehát $p$ kitevője:
 		\[ \alpha - 2\beta = \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left \lfloor \dfrac{2n}{p^i} \right \rfloor - 2 \cdot \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left \lfloor \dfrac{n}{p^i} \right \rfloor  \]
-		igaz, hogy itt a második esetében elegendő lenne $n$-ig menni a szumma alatti feltételben, de korábban (az említett tétel bizonyításakor) megbeszéltük, hogy ha tovább is megyünk az sem gond, mert csak $0$-kat adunk össze. Csupán azért választjuk mst ezt a feltételt, mert így láthatóan összevonhatóak a szummák:
+		Igaz, hogy a második szumma esetében elegendő lenne $p^i\leq n$-ig menni, de korábban (az említett tétel bizonyításakor) megbeszéltük, hogy ha tovább is megyünk az sem gond, mert csak $0$-kat adunk össze. Csupán azért választjuk most ezt a feltételt, mert így láthatóan összevonhatóak a szummák:
 		\[ = \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left( \left \lfloor \dfrac{2n}{p^i} \right \rfloor - 2\cdot  \left \lfloor \dfrac{n}{p^i} \right \rfloor \right) \]
 		Az egészrész definíciója szerint $x-1< \lfloor x \rfloor \leq x$, így
 		\[ \left \lfloor \dfrac{2n}{p^i} \right \rfloor \leq \dfrac{2n}{p^i} \hspace{3mm} \text{és} \hspace{3mm}   \left \lfloor \dfrac{n}{p^i} \right \rfloor > \dfrac{n}{p^i} - 1  \]
 		becslésekkel felülről becsülhetők az összeadandók:
-		\[  \left \lfloor \dfrac{2n}{p^i} \right \rfloor - 2\cdot  \left \lfloor \dfrac{n}{p^i} \right \rfloor < \dfrac{2n}{p^i} - 2\cdot \left( \dfrac{n}{p^i} \right)  =  2  \]
-		De ha a szumma minden egyes tagja kisebb $2$-nél, akkor csak $0$-kat vagy $1$-eseket, pontosabban mivel előbbi lényegtelen csak $1$-eseket adunk össze amíg $p^i\leq 2n$, tehát megszámoljuk $p$-nek $1$-től hanyadik hatványáig lesz igaz, hogy $p^i\leq 2n$. Ez pedig azzal ekvivalens, hogy mi az a legnagyobb hatványa $p$-nek melyre $p^i\leq 2n$.
+		\[  \left \lfloor \dfrac{2n}{p^i} \right \rfloor - 2\cdot  \left \lfloor \dfrac{n}{p^i} \right \rfloor < \dfrac{2n}{p^i} - 2\cdot \left( \dfrac{n}{p^i} - 1 \right)  =  2  \]
+		De ha a szumma minden egyes tagja kisebb $2$-nél, akkor csak $0$-kat vagy $1$-eseket, pontosabban mivel előbbi lényegtelen csak $1$-eseket adunk össze amíg $p^i\leq 2n$.
 		
-		Mi lesz akkor $p$-nek az $\alpha$ kitevője végül? Az a legnagyobb szám, melyre még a $p$-t emelve legfeljebb $2n$-et kapunk, így biztosan $p^{\alpha} \leq 2n$. Ezt akartuk belátni.
+		Ha $k$ a legnagyobb kitevő, amire még teljesül, hogy $p^k\leq 2n$, akkor legfeljebb $k$ egyest adunk össze, tehát a kitevő $\alpha \leq k$. Az exponenciális függvény monotonitása miatt ekkor
+		\[ p^\alpha \leq p^k \leq 2n  \]
+		ahonnan $p^\alpha \leq 2n$ és ezt kellett belátnunk.
+		%Tehát megszámoljuk $p$-nek $1$-től hanyadik hatványáig lesz igaz, hogy $p^i\leq 2n$. Ez pedig azzal ekvivalens, hogy mi az a legnagyobb hatványa $p$-nek melyre $p^i\leq 2n$.
+		%Mi lesz akkor $p$-nek az $\alpha$ kitevője végül? Az a legnagyobb szám, melyre még a $p$-t emelve legfeljebb $2n$-et kapunk, így biztosan $p^{\alpha} \leq 2n$. Ezt akartuk belátni.
 	\end{proof}
 
 	\textbf{Érdekességek:} Volt három érdekes formula, melyek előadáson előkerültek, de őket nem bizonyítottuk (ha valakit érdekel Freud: Számelmélet könyvében mindegyik megtalálható: 5.4.4. feladat b része, 5.4.1. Tétel és 5.4.2. Tétel). A három formula ($\pi(x)$ jelöli a prímek számát $x$-ig):
@@ -2997,43 +3001,43 @@
 
 	\begin{proof}
 		Azt fogjuk belátni, hogy az $n<p\leq 2n$ prímek szorzata nagyobb mint $1$, ekkor lennie kell ott ténylegesen prímszámnak, nem üres a szorzat. Ehhez vizsgáljuk szokásos kedvenc binomiális együtthatónkat és annak prímtényezős felbontását. Most négy részre bontjuk a produktumot, attól függően, hogy mekkora prímek szorzatát vizsgáljuk:
-		\[ {2n\choose n} = \prod p^\alpha = \prod_{p\leq \sqrt{2n}} p^\alpha \cdot \prod_{\sqrt{2n}< p \leq \frac{2}{3}n} p^\alpha \cdot \prod_{\frac{2}{3}n<p\leq n} p^\alpha \cdot \prod_{n<p\leq 2n} p^\alpha \]
+		\[ {2n\choose n} = \prod p^\alpha = \color{red} \prod_{p\leq \sqrt{2n}} p^\alpha \color{black} \cdot \color{blue} \prod_{\sqrt{2n}< p \leq \frac{2}{3}n} p^\alpha \color{black} \cdot \color{purple} \prod_{\frac{2}{3}n<p\leq n} p^\alpha \color{black} \cdot \prod_{n<p\leq 2n} p^\alpha \]
 		Ezen $4$ tényező közül az utolsóról kellene belátnunk, hogy nagyobb $1$-nél. Ehhez felülről fogjuk becsülni az első 3 tényezőt.
 		
 		\textit{I. becslés:}
 		
 		A \ref{otodik}. tétel szerint minden $p^{\alpha} \leq 2n$, tehát az első szummának prímhatványait becsülve:
 		\[ \prod_{p\leq \sqrt{2n}} p^\alpha  \leq \prod_{p\leq \sqrt{2n}} 2n   \]
-		és mivel $p\leq \sqrt{2n}$, így ez egy legfeljebb $\sqrt{2n}$ tényezős szorzat, még ha $1$-től $2n$-ig az összes számot prímnek veszem akkor is, tehát tovább becsülve
-		\[ \prod_{p\leq \sqrt{2n}} p^\alpha  \leq \prod_{p\leq \sqrt{2n}} 2n \leq (2n)^{\sqrt{2n}} \leq (2n+1)^{\sqrt{2n}} \]
+		és mivel $p\leq \sqrt{2n}$, így ez egy legfeljebb $\sqrt{2n}$ tényezős szorzat, még ha $1$-től $\sqrt{2n}$-ig az összes számot prímnek veszem akkor is, tehát tovább becsülve
+		\[ \color{red} \prod_{p\leq \sqrt{2n}} p^\alpha \color{black} \leq \prod_{p\leq \sqrt{2n}} 2n \leq (2n)^{\sqrt{2n}} \leq \color{red} (2n+1)^{\sqrt{2n}} \color{black} \]
 		
 		\textit{II. becslés:}
 		
 		Itt először vegyük észre, hogy innentől kezdve a kitevők igazából feleslegesek is, merthogy az összes prímtényező legfeljebb $1$. hatványon lehet. Hiszen innentől kezdve olyan $p$ prímekkel van dolgunk, melyekre $\sqrt{2n}<p$, azaz $2n<p^2$, tehát $p^2\nmid 2n$ vagyis csak első hatványon szerepelhet legfeljebb:
 		\[ \prod_{\sqrt{2n}< p \leq \frac{2}{3}n} p^\alpha = \prod_{\sqrt{2n}< p \leq \frac{2}{3}n} p  \]
-		Ezt most felülről becsüljük úgy, hogy nem csak a $\sqrt{2n}$ és $\frac{2}{3}n$ közötti prímhatványokat szorozzuk össze, hanem $\frac{2}{3}n$-ig az összeset:
+		Ezt most felülről becsüljük úgy, hogy nem csak a $\sqrt{2n}$ és $\frac{2}{3}n$ közötti prímeket szorozzuk össze, hanem $\frac{2}{3}n$-ig az összeset:
 		\[ \prod_{\sqrt{2n}< p \leq \frac{2}{3}n} p \leq \prod_{p \leq \frac{2}{3}n} p  \]
 		most használjuk a \ref{primekszorzata}. tételt, így
-		\[ \prod_{\sqrt{2n}< p \leq \frac{2}{3}n} p \leq \prod_{p \leq \frac{2}{3}n} p < 4^{\frac{2}{3}n}  \]
+		\[ \color{blue} \prod_{\sqrt{2n}< p  \leq \frac{2}{3}n} p \color{black} \leq \prod_{p \leq \frac{2}{3}n} p < \color{blue} 4^{\frac{2}{3}n} \color{black}  \]
 		becsléshez jutunk.
 		
 		\textit{III. becslés:}
 		
 		Ez a legizgalmasabb mind közül, legalábbis Erdős Pál szerint. Ugyanis itt becsülni sem igazán fogunk, azt látjuk be, hogy a harmadik tényező egészen pontosan $1$, ugyanis nincs prímosztója ${2n\choose n}$ binomiális együtthatónak $\frac{2}{3}n$ és $n$ között. Megint csak a definíciót felírva:
-		\[ {2n\choose n} = \dfrac{(2n)!}{n!\cdot n!} = \dfrac{1\cdot 2\cdot \ldots \cdot \frac{2}{3}n \cdot \ldots \cdot \color{red}p\color{black} \cdot \ldots \cdot n \cdot (n+1) \cdot \ldots \color{red}2p\color{black} \cdot \ldots \cdot 2n}{(1\cdot \ldots \cdot \color{red}p\color{black} \cdot \ldots \cdot n) \cdot (1\cdot \ldots \cdot \color{red}p\color{black} \cdot \ldots \cdot n)}  \]
-		Amennyiben $\frac{2}{3}n < p \leq n$ akkor $ \frac{4}{3} n < 2p\leq 2n$ és $2n<3p$, ami azt jelenti, hogy a számlálóban pontosan $2$-szer szerepel $p$, ugyanakkor mivel $p\leq n$, így a nevezőben is szerepel $2$ szer, vagyis egyszerűsíthetünk vele. Tehát ilyen $p$ biztosan nem lehet végül osztója ${2n\choose n}$-nek, a harmadik produktum értéke egészen pontosan $1$.
+		\[ {2n\choose n} = \dfrac{(2n)!}{n!\cdot n!} = \dfrac{1\cdot 2\cdot \ldots \cdot \frac{2}{3}n \cdot \ldots \cdot \color{red}p\color{black} \cdot \ldots \cdot n \cdot (n+1) \cdot \ldots \cdot \color{red}2p\color{black} \cdot \ldots \cdot 2n}{(1\cdot \ldots \cdot \color{red}p\color{black} \cdot \ldots \cdot n) \cdot (1\cdot \ldots \cdot \color{red}p\color{black} \cdot \ldots \cdot n)}  \]
+		Amennyiben $\frac{2}{3}n < p \leq n$ akkor $ \frac{4}{3} n < 2p\leq 2n$ és $2n<3p$, ami azt jelenti, hogy a számlálóban pontosan $2$-szer szerepel $p$, ugyanakkor mivel $p\leq n$, így a nevezőben is szerepel $2$-szer, vagyis egyszerűsíthetünk vele. Tehát ilyen $p$ biztosan nem lehet végül osztója ${2n\choose n}$-nek, a harmadik produktum értéke egészen pontosan $1$.
 		
 		\textit{Konklúzió:}
 		
 		Összességében tehát a következő becslést kaptuk:
-		\[ {2n\choose n} \leq (2n)^{\sqrt{2n}} \cdot 4^{\frac{2}{3}n} \cdot 1 \cdot \prod_{n<p\leq 2n} p   \]
+		\[ {2n\choose n} \leq \color{red} (2n+1)^{\sqrt{2n}} \color{black} \cdot \color{blue} 4^{\frac{2}{3}n} \color{black} \cdot \color{purple} 1 \color{black} \cdot \prod_{n<p\leq 2n} p   \]
 		becsüljük alulról is a binomiális együtthatót a \ref{first}. tétel szerint:
 		\[ \dfrac{4^n}{2n+1}  < {2n\choose n} \leq (2n+1)^{\sqrt{2n}} \cdot 4^{\frac{2}{3}n} \cdot 1 \cdot \prod_{n<p\leq 2n} p   \]
 		Vagyis
 		\[ \dfrac{4^{\frac{1}{3}n}}{(2n+1)^{\sqrt{2n}+1}} < \prod_{n<p\leq 2n} p  \]
-		Itt elegendő volna azt belátnunk, hogy a baloldal legalább $1$, azzal kész is volnánk. Nos ez sajnos nem mindig igaz, de belátható, hogy $n\geq 514$ esetén igen\footnote{Innentől a bizonyítás kétfelé mehet tovább, az egyik irány amire előadáson Szabó Csaba tanár úr utalt, a másik megtalálható a mellékletek között, az a Bizonyítások a könyvből című könyvből származik.}. Először ehhez be kell látni $514$-re, majd pedig hogy monoton növekszik a függvény. Ezt az utóbbit viszont nem is olyan egyszerű, nekem nem sikerült, és előadáson sem láttuk be, tehát feltételezem, hogy ennyi elegendő vizsgára.
+		Itt elegendő volna azt belátnunk, hogy a baloldal legalább $1$, azzal kész is volnánk. Nos ez sajnos nem mindig igaz, de belátható, hogy $n\geq 514$ esetén igen\footnote{Innentől a bizonyítás kétfelé mehet tovább, az egyik irány amire előadáson Szabó Csaba tanár úr utalt, a másik megtalálható a mellékletek között, az a Bizonyítások a könyvből című könyvből származik.}. Először ehhez be kell látni $514$-re, majd pedig, hogy monoton növekszik a függvény. Ezt az utóbbit viszont nem is olyan egyszerű, nekem nem sikerült, és előadáson sem láttuk be, tehát feltételezem, hogy vizsgára sem követelmény.
 		
-		Viszont be kell látni $n\leq 514$-re is:
+		Viszont be kell látni $n < 514$-re is:
 		\begin{itemize}
 			\item{$n = 1$-re $1<2\leq 2$}
 			\item{$n = 2$-re $2<3\leq 4$}
@@ -3420,7 +3424,9 @@
 	
 	Változtatunk egy korábbi tételen is, finomítunk rajta: 
 	\[ {2n\choose n } > \dfrac{4^n}{2n}  \]
-	Mivel ${2n\choose n}$ a középső tag továbbra is a sorából, ezért az átlagnál nagyobb. De az előző, előadáson elhangzó bizonyításon erre úgy tekintettünk, hogy $2n+1$ tag van a sorában. Valójában ebből a szélső kettő nagyon pici, csupán $1$-ek mindig, vonjuk őket össze $1$ taggá. A sorösszeg ekkor továbbra is $4^n$, viszont az átlagolandó elemek száma $2n$, így már ki is jött a finomabb állítás. %${2n\choose n} > \frac{4^n}{2n}$.
+	Mivel ${2n\choose n}$ a középső tag továbbra is a sorából, ezért az átlagnál nagyobb. De a korábbi, előadáson elhangzó bizonyításban erre úgy tekintettünk, hogy $2n+1$ tag van a sorában.	 Valójában ebből a szélső kettő nagyon pici, csupán $1$-ek mindig, vonjuk őket össze $1$ taggá és a következő számokat átlagoljuk:
+	\[ {2n\choose 0} + {2n\choose 2n},\hspace{3mm} {2n\choose 1},\hspace{3mm} {2n\choose 2}, \hspace{3mm} \ldots \hspace{3mm} {2n\choose 2n-1}  \]
+	A sorösszeg ekkor továbbra is $4^n$, viszont az átlagolandó elemek száma $2n$, így már ki is jött a finomabb állítás. %${2n\choose n} > \frac{4^n}{2n}$.
 	
 	Ezzel az állítással nincs szükségünk a $(2n)^{\sqrt{2n}+1} \leq (2n+1)^{\sqrt{2n}+1}$ becslésre, így most a bizonyítandó egy picit változott:
 	\[ \dfrac{4^{\frac{1}{3}n}}{(2n)^{\sqrt{2n}+1}} > 1 \]
@@ -3433,27 +3439,27 @@
 	
 	\textbf{Emlék:}
 	
-	Bernoulli-egyenlőtlenség: Amennyiben $h\geq -1$ akkor $(1+h)^n \leq 1+nh$ és egyenlőség csak $n=0$ vagy $n=1$ vagy $h=0$ esetén áll fenn.
+	Bernoulli-egyenlőtlenség: Amennyiben $n\in \N^+$ és $h\geq -1$ akkor $(1+h)^n \geq 1+nh$ és egyenlőség csak $n=1$ vagy $h=0$ esetén áll fenn.
 	
 	Speciálisan
 	\begin{equation}\label{bern}
 		2^n = (1+1)^n > 1+n
 	\end{equation}
 	
-	Fontos megállapítás az is, hogy az egészrész definíciója szerint $x - 1 < \color{blue} \lfloor x \rfloor \leq x \color{black}$ azaz $\color{red} x<\lfloor x \rfloor + 1 \color{black}$.
+	Fontos visszaemlékeznünk arra is, hogy az egészrész definíciója szerint $x - 1 < \color{blue} \lfloor x \rfloor \leq x \color{black}$ azaz $\color{red} x<\lfloor x \rfloor + 1 \color{black}$.
 	
 	Tekintsük a következő becslés sorozatot:
 	\begin{equation}\label{lol}
 		 2n = (\color{red}\sqrt[6]{2n}\color{black})^6 < (\color{red} \lfloor \sqrt[6]{2n} \rfloor + 1 \color{black})^6 \stackrel{\ref{bern}}{<} \left(2^{\lfloor \sqrt[6]{2n} \rfloor}\right)^6 = 2^{6\cdot \color{blue} \lfloor \sqrt[6]{2n} \rfloor \color{black} } \leq 2^{6\cdot \color{blue} \sqrt[6]{2n} \color{black} }
 	\end{equation}
-	Mivel $n\leq 50$-re láttuk az állítást eddig is, ezért feltehető, hogy $n\geq 50$, azaz
+	Mivel $n< 50$-re láttuk, hogy igaz a Csebisev-tétel eddig is, ezért feltehető, hogy $n\geq 50$, azaz
 	\[ 2n\geq 100 \hspace{3mm} \Leftrightarrow \hspace{3mm} \sqrt{2n} \geq 10 \hspace{3mm} \Leftrightarrow \hspace{3mm} \color{green}2\cdot \sqrt{2n}\color{black} \geq 20 \color{green}> 18\color{black}   \]
 	Most pedig tekintsük a következő becslés sorozatot:
 	\[ 2^{\color{purple}2n\color{black}} \stackrel{\ref{equi}}{\leq} (2n)^{3\cdot (\sqrt{2n} + 1)} \stackrel{\ref{lol}}{<} \left(2^{6\cdot \sqrt[6]{2n}}\right)^{3\cdot (\sqrt{2n}+1)} = 2^{18 \cdot (\sqrt{2n}+1)\cdot \sqrt[6]{2n}}  \]
 	felülbecsülve az egyik $18$-ast
 	\[= 2^{(18 \sqrt{2n}+\color{green}18\color{black})\cdot \sqrt[6]{2n}} <  2^{(18\sqrt{2n} + \color{green}2\cdot \sqrt{2n}\color{black})\cdot \sqrt[6]{2n}} = 2^{\color{purple}20\sqrt{2n}\cdot \sqrt[6]{2n}\color{black}}  \]
 	ahonnan a $2^x$ exponenciális függvény szigorú monoton növekedése miatt
-	\[ 2n < 20\cdot \sqrt{2n} \cdot \sqrt[6]{2n} = 20\cdot (2n)^{\frac{2}{3}} \]
+	\[ \color{purple} 2n \color{black} < \color{purple} 20\cdot \sqrt{2n} \cdot \sqrt[6]{2n} \color{black} = 20\cdot (2n)^{\frac{2}{3}} \]
 	osztva $2$-vel és köbre emelve
 	\[ n < 10\cdot (2n)^{\frac{2}{3}} \hspace{3mm} \Leftrightarrow \hspace{3mm} n^3 < 1000 \cdot 4 \cdot n^2 \hspace{3mm} \Leftrightarrow \hspace{3mm} n < 4000  \]
 	Vagyis azt kaptuk, hogy ha nem teljesül amit be akarunk látni, akkor $n<4000$. Ez jó hír, mert ezek szerint $n\geq 4000$-re beláttuk a Csebisev-tételt, az első $4000$ szám ezután már semmiség, hasonlóan fejezzük be ahogy az előadáson elhangzott bizonyítást is, egy megfelelő prímsorozat (ahol minden prím kisebb az előtte levő kétszeresénél):
