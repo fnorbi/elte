@@ -2337,7 +2337,7 @@
 
 	\chapter{Fermat, Wiles, Rivest, Shamir, Adlemann}
 	
-	A 8. és 10. előadásról egyelőre csak a fontosabb tételeket írom fel, bizonyításukra igyekszem későbbiekben sort keríteni (amennyiben időm engedi és megfejtem a füzetemben lévő hieroglifákat).
+	%\chapter{Időhiány miatt nem készült el, és nem is fog ebben a vizsgaidőszakban!}
 	
 	\section{Pitagoraszi számhármasok (emlék)}
 	
@@ -2369,6 +2369,8 @@
 	\end{theo}
 	
 	\section{Titkosírás (RSA)}
+	
+	Ez a fejezet szolgált volna eredetileg az RSA titkosírás működésének leírására, ugyanakkor többek között időhiány miatt ez végül nem készül el. Elméletileg Algebra1-ből már volt szó róla, ott érdemes megnézni, meghallgatni a hanganyagot, illetve Freud: Számelmélet könyvében az 5.8.1 Tételt és ,,környezetét'' megnézni.
 	
 	\chapter{Egészen új egészek}
 	\section{Gauss-egészek}
@@ -3057,10 +3059,172 @@
 
 	\chapter{Számelméleti függvények}
 	
+	%14:00
+	
 	\section{Hegy- és völgytétel}
+	
+	\textbf{Emlék:}
+	
+	\begin{theo}[Dirichlet-tétel]
+		Ha $(a,d)=1$ akkor végtelen sok $dk+a$ alakú prím van.
+	\end{theo}
+	
+	Tanultunk Algebra1-ből a $d(n)$ számelméleti függvényről, ami az $n$ szám osztóinak a számát adja eredményül. Vizsgáljuk meg ennek egy különleges tulajdonságát.
+	
+	Minden prím esetén $d(p)=2$, hiszen bármely prímnek $2$ osztója van. Ugyanakkor $d(2^{n}) = n+1$, tehát a függvény tetszőleges nagy értéket is felvehet. Hogyan néz ki nagyjából kezdetben a függvény?
+	
+	\begin{figure}[h] %h=here, t=top, b=bottom
+		\centering
+		\includegraphics[height=5cm]{d(n).png}
+		\caption{A $d(n)$ függvény}\label{d(n)}
+	\end{figure}
+
+	Belátható, hogy bármilyen nagy völgy, illetve hegy található a grafikonon. Szemléletesen hegy alatt azt értjük, hogy egy kis érték után egy nagy, majd újra egy kicsi következik közvetlenül egymás után, völgy alatt pedig, hogy egy nagy érték után egy kicsi, majd újra nagy. Pontosabban, hogy ez mit is jelent, a következő tétel állításából érthető meg.
+	
+	\begin{theo}[Hegytétel]
+		Adott $k>0$ egész esetén $\exists n$ melyre $d(n)-d(n+1) > k$ és $d(n)-d(n-1)>k$
+	\end{theo}
+
+	Ezt nem fogjuk belátni, de a párját, a völgytételt igen.
+	
+	\begin{theo}[Völgytétel]
+		Adott $k>0$ egész esetén $\exists n$ melyre $d(n-1)-d(n)>k$ és $d(n+1)-d(n)>k$.
+	\end{theo}
+
+	\begin{proof}
+		Erősebb lesz amit belátunk, azt fogjuk belátni, hogy létezik ilyen $n = p$ prímszám is, amire ez teljesül, sőt végtelen sok ilyen $p$ létezik.
+		
+		Tekintsük adott $k$ esetén a $t\cdot 3^{k+2}$ és a $q\cdot 2^{k+2}$ számokat. Elegendő volna belátni, hogy létezik olyan $p$ prím, melyre:
+		\[ t\cdot 3^{k+2} + 1 = p = q\cdot 2^{k+2} - 1  \]
+		vagyis amelyre a $t\cdot 3^{k+2}$, $p$ és $q\cdot 2^{k+2}$ egymást követő számok, és ez egy megfelelő völgy, hiszen az osztóik száma
+		\[ d(t\cdot 3^{k+2}) = k+3 \hspace{5mm} \text{és} \hspace{5mm} d(p) = 2 \hspace{5mm} \text{és} \hspace{5mm} d(q\cdot 2^{k+2}) = k+3  \]
+		vagyis a különbség mindkét esetben $k+3-k=k+1>k$.
+		
+		Mért létezik ilyen $p$ prímszám? Mit kellene neki teljesítenie? Például $3^{k+2}$-vel osztva $1$ maradékot ad, illetve $2^{k+2}$-vel osztva $-1$ maradékot, tehát
+		\[ p\equiv 1\ (3^{k+2}) \hspace{5mm} \text{és} \hspace{5mm} p\equiv -1\ (2^{k+2})  \]
+		Mivel $(3^{k+2},2^{k+2}) = 1$, így ennek a szimultán kongruenciarendszernek egyértelműen létezik egy $p\equiv A$ megoldása modulo $2^{k+2}\cdot 3^{k+2} = 6^{k+2}$. Ez a megoldás
+		\[ p = s \cdot 6^{k+2} + A  \]
+		alakú, ami azt jelenti, hogy olyan prímre volna szükségünk, ami $s\cdot 6^{k+2} + A$ alakú, és minden ilyen prím esetén található egy $k$-tól függő völgy.
+		
+		Vegyük észre, hogy mivel $p\equiv 1\ (3^{k+2})$, így $3^{k+2}\mid p-1$ azaz $3\mid p-1$, azaz $3\nmid p$. Hasonlóan $2\nmid p$. 
+		
+		Ezek miatt $(A,6^{k+2}) = 1$, hiszen közös osztóként $1$-en kívül csak $2$-vel vagy $3$-mal osztható számok jöhetnének szóba, de az $A$ egyikkel sem lehet osztható, hiszen különben $s\cdot 6^{k+2} + A = p$ is osztható lenne vele, de $p$-ről láttuk, hogy sem $2$-vel, sem $3$-mal nem lehet osztható.
+		
+		A relatív prímség miatt alkalmazhatjuk a Dirichlet-tételt, azaz létezik $p = s\cdot 6^{k+2} + A$ alakú prímszám, méghozzá végtelen sok is. Ezek mind megfelelőek számunkra.
+	\end{proof}
+	
+	
+	%30:00
+	
 	\section{Tökéletes}
+	
+	\textbf{Emlék: }
+	
+	A $\sigma(n)$ függvény az $n$ osztóinak a számát adja értékül, képlete (feltéve, hogy $n$ kanonikus alakja szokásosan $p_1^{\alpha_1} \cdot \ldots \cdot p_k^{\alpha_k}$):
+	\[ \sigma(n) = \dfrac{p_1^{\alpha_1+1}-1}{p_1 -1} \cdot \dfrac{p_2^{\alpha_2+1}-1}{p_2 -1} \cdot \ldots \cdot \dfrac{p_k^{\alpha_k+1}-1}{p_k -1} \]
+	Speciálisan $p$ prím esetén $\sigma(p) = \dfrac{p^2-1}{p-1} = p+1$, amin nem is lepődünk meg, hiszen $p$ osztói pontosan az $1$ és a $p$, és $\sigma(p)$ az osztók összege, vagyis $1+p$.
+	
+	Tanultuk azt is, hogy $\sigma$ multiplikatív függvény, tehát $(a,b)=1$ esetén $\sigma(a\cdot b)= \sigma(a)\cdot \sigma(b)$.
+	
+	\begin{defi}
+		Az $n\in \Z^{+}$ számot \textbf{tökéletes szám}nak nevezzük, amennyiben megegyezik valódi osztóinak összegével, azaz osztóinak kétszeresével: $\sigma(n) = 2n$
+	\end{defi}
+
+	Tökéletes szám például a $6=1+2+3$ vagy a $28=1+2+4+7+14$. Nem tudjuk hány tökéletes szám létezik, mint ahogy azt sem, hogy van-e páratlan.
+
+	\textbf{Emlék:} Mersenne-prímeknek nevezzük a $2^p-1$ alakú prímeket. Láttuk Algebra1-ből, hogy ha egy ilyen alakú szám prímszám, akkor $p$ is szükségképpen prím. Most vizsgáljuk meg a Mersenne-prímek és a tökéletes számok kapcsolatát.
+	
+	\begin{theo}
+		Az $n$ páros szám akkor és csak akkor tökéletes, ha $n=2^p\cdot (2^{p+1} - 1)$ alakú, ahol $2^{p+1}-1$ Mersenne-prím.
+	\end{theo}
+
+	\begin{proof}
+		Az első irány triviális, ha $n=2^p\cdot (2^{p+1}-1)$ alakú, akkor mivel $(2^p,2^{p+1}-1)=1$ (előbbi csak $2$-vel osztható, utóbbi azzal pont nem), így $\sigma$ multiplikativitása miatt
+		\[ \sigma(n) = \sigma(2^p\cdot (2^{p+1} - 1)) = \sigma(2^p)\cdot \sigma(2^{p+1}-1)  \]
+		majd használva $\sigma$ képletét, és hogy $2^{p+1}-1$ prím:
+		\[ = \dfrac{2^{p+1}-1}{2-1} \cdot 2^{p+1} = 2\cdot 2^p \cdot (2^{p+1}-1) = 2n  \]
+		Azaz $\sigma(n) = 2n$, így $n$ tökéletes.
+		
+		Nézzük a másik irányt és lássuk be, hogy minden páros tökéletes szám ilyen alakú. Legyen $\alpha$ a legnagyobb olyan pozitív egész, melyre $2^{\alpha}\mid n$. Ekkor
+		\[ n = 2^{\alpha} \cdot m \]
+		ahol $m$ páratlan. Mivel ez a két szám megegyezik, így $\sigma$ értékük is (most használjuk, hogy $n$ tökéletes):
+		\[ 2^{\alpha+1}\cdot m = 2n = \sigma(n) = \sigma(2^{\alpha} \cdot m)  \]
+		mivel $m$ páratlan, így $(2^\alpha, m) = 1$, vagyis $\sigma$ multiplikativitása miatt
+		\[ 2^{\alpha+1}\cdot m = \sigma(2^{\alpha}) \cdot \sigma(m)  \]
+		ami $\sigma(n)$ képlete miatt
+		\begin{equation}\label{tökéletes}
+			2^{\alpha+1}\cdot m = \dfrac{2^{\alpha+1} - 1}{2-1} \cdot \sigma(m) = (2^{\alpha+1}-1) \cdot \sigma(m) 
+		\end{equation}
+		Mivel $2^{\alpha+1} - 1$ osztja a jobboldalt, így a baloldalt is, de $(2^{\alpha+1},2^{\alpha+1}-1) = 1$, így $m$-et osztja:
+		\[ 2^{\alpha+1}-1\mid m \hspace{5mm} \Leftrightarrow \hspace{5mm} \exists k\colon m = (2^{\alpha+1}-1)\cdot k  \]
+		a \ref{tökéletes} egyenletbe $m=(2^{\alpha+1}-1)\cdot k$-t helyettesítve
+		\[ 2^{\alpha+1}\cdot (2^{\alpha+1}-1)\cdot k   = (2^{\alpha+1}-1) \cdot \sigma\left((2^{\alpha+1}-1)\cdot k\right) \]
+		egyszerűsítve $2^{\alpha+1}-1$-gyel\footnote{Az egyszerűsítés elvégezhető, hiszen ha $2^{\alpha+1}-1 = 0$ volna, akkor $2^{\alpha+1} \neq 1$, azaz $\alpha+1 = 0$, így $\alpha = -1$, ami lehetetlen, hiszen $\alpha > 0$, mert $n$-ről feltettük, hogy páros.}
+		\begin{equation}\label{sigma}
+			2^{\alpha+1} \cdot k = \sigma\left((2^{\alpha+1}-1)\cdot k\right)
+		\end{equation}
+		Azt fogjuk belátni, hogy $k=1$. Indirekt tegyük fel, hogy $k\neq 1$. Ekkor a $(2^{\alpha+1}-1)\cdot k$ számnak különböző\footnote{Itt a harmadik azért nem lehet $k$, mivel akkor $2^{\alpha+1}-1 = 1$ volna, azaz $2^{\alpha+1} = 2$ így $\alpha = 0$, de $\alpha > 0$, mert $n$ páros.} osztói $1$, $k$, $k\cdot(2^{\alpha+1}-1)$. Ezek szerint az osztóinak összege alulról becsülhető:
+		\[ 2^{\alpha+1} \cdot k = \sigma\left( (2^{\alpha+1}-1)\cdot k \right) \geq 1+k+k\cdot (2^{\alpha+1}-1) = 1 + k\cdot 2^{\alpha+1}  \]
+		azaz $0>1$, ami nyilvánvaló ellentmondás.
+		
+		Így tehát $k=1$, ami azt jelenti, hogy $m=2^{\alpha+1}-1$, ahonnan $\ref{sigma}$ miatt
+		\[ 2^{\alpha+1} = \sigma(2^{\alpha+1}-1)  \]
+		ami azt jelenti, hogy $2^{\alpha+1}-1$ osztóinak összege csupán a két triviális osztójának ($1$-nek és önmagának) az összege. Ezek szerint nincs más osztója, vagyis ő egy prímszám.
+		
+		Azt mondhatjuk tehát, hogy
+		\[ n = 2^{\alpha} \cdot m = 2^{\alpha} \cdot (2^{\alpha+1} - 1)  \]
+		ahol $2^{\alpha+1}-1$ prímszám (és mivel ilyen alakú, így egyben Mersenne-prím is).	
+	\end{proof}
+	
+	%54:00
+	
 	\section{Melyik fákat látom?}
 	
+	Tegyük fel, hogy az koordináta-rendszer origójában állunk és minden rácspontban (vagyis egész koordinátájú pontban) van egy fa, kivéve ahol mi vagyunk. A kérdés: Hány százalékát látjuk a fáknak? Na persze itt jó matematikus lévén felteszünk néhány igen furcsa dolgot, például hogy egyszerre látunk az összes irányba, tehát valójában csak azokat a fákat nem látjuk, akit egy másik fa (akit látunk) takar.
+	
+	\begin{figure}[h] %h=here, t=top, b=bottom
+		\centering
+		\includegraphics[height=6cm]{fak.png}
+		\caption{A fák közepén állok, körbevesznek $(a;b)$ párok}\label{fak}
+	\end{figure}
+
+	Például látjuk a $(2;1)$, illetve a $(3;1)$ koordinátájú pontokban lévő fákat, de a $(4;2)$-ben lévőt nem, mert a $(2;1)$ takarja. Általánosan is könnyen látható, hogy pontosan azokat a fákat látjuk, melyek $(a;b)$ koordinátáira igaz, hogy $(a,b)=1$, tehát a kérdés valójában: mi a valószínűsége annak, hogy két egész szám relatív prím?
+	
+	Az ehhez kapcsolódó tétel bizonyításához szükségünk lesz egy másik nevezetes tételre, amiben nem vagyok biztos, hogy korábban szerepelt (talán Egyváltozós analízis2-ből említettük, de nem láttuk be), ezt először kimondom, de nem látom be, előadáson is csak hivatkoztunk rá.
+	
+	\begin{theo}
+		A négyzetszámok reciprokösszege
+		\[ \sum\limits_{n = 1}^{\infty} \dfrac{1}{n^2} =   \dfrac{\pi^2}{6} \]
+	\end{theo}
+
+	És most jöjjön a fejezethez közvetlenül kapcsolódó tétel.
+	
+	\begin{theo}
+		Annak a valószínűsége, hogy $a$ és $b$ relatív prímek:
+		\[ P\Big( (a,b) = 1 \Big) = \dfrac{6}{\pi^2}  \]
+	\end{theo}
+
+	\begin{proof}
+		Mit jelent az, hogy az $a$ és $b$ számok relatív prímek? Ez egy elég tág kérdés, mit jelent ez a $2$ prímszámra nézve? Egy dolog biztos, nem oszthatja mindkét számot. Mi a valószínűsége annak, hogy a $2$ nem osztja $a$ és $b$ számot is. Tekintsük a komplementer eseményt, mi a valószínűsége, hogy a $2$ osztja $a$-t és $b$-t is. Na ez már könnyű, függetlenek az események és a számok fele osztható $2$-vel, így:
+		\[ P\left( 2\nmid (a,b)\right) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2}  \]
+		Folytassuk a $3$-mal, mivel az a következő prímszám. Hasonlóan gondolható végig, ismét komplementer eseménnyel a valószínűség:
+		\[ P\left(3\nmid (a,b)\right) = 1 - \dfrac{1}{3} \cdot \dfrac{1}{3} \]
+		Ezt végig kell nézni az összes többi prímre is:
+		\[ x = P\Big( (a,b) = 1   \Big) = \prod_{p \text{ prím}} P\left( p\nmid (a,b) \right) = \prod_{p \text{ prím}} \left( 1- \dfrac{1}{p^2}   \right) = \left( 1 - \dfrac{1}{2^2}  \right) \cdot \left( 1 - \dfrac{1}{3^2}  \right) \cdot \ldots  \]
+		Tekintsük az egésznek a reciprokát:
+		\[ \dfrac{1}{x} = \dfrac{1}{\left( 1 - \dfrac{1}{2^2}  \right) \cdot \left( 1 - \dfrac{1}{3^2}  \right) \cdot \ldots} = \dfrac{1}{1-\frac{1}{2^2}} \cdot \dfrac{1}{1-\frac{1}{3^2}} \cdot \ldots  \]
+		Vegyük észre, hogy mivel a mértani sor összegképlete szerint
+		\[ 1+q+q^2+q^3+\ldots = \dfrac{1}{1-q}  \]
+		ezért jobboldalon valójában végtelen sok mértani sor összege van, azaz
+		\[ \dfrac{1}{x} = \left(1+\dfrac{1}{2^2} + \dfrac{1}{(2^2)^2} + \ldots \right)\cdot \left(1+\dfrac{1}{3^2}+\dfrac{1}{(3^2)^2}+\ldots\right)\cdot \ldots  \]
+		vagyis elvégezve a beszorzásokat a lehetséges összes féle módon:
+		\[ \dfrac{1}{x} = \sum \dfrac{1}{(2^2)^ {\alpha_1}\cdot (3^2)^{\alpha_2} \cdot (5^2)^{\alpha_3} \ldots } = \sum \dfrac{1}{(2^{\alpha_1}\cdot 3^{\alpha_2}\cdot 5^{\alpha_3} \cdot \ldots)^2}  \]
+		Vagyis jobboldalon a nevezőben ott áll az összes létező kanonikus alak négyzete (és még az $1$ is). Márpedig mivel minden $1$-nél nagyobb számnak egyértelműen létezik kanonikus alakja, így ami jobboldalon áll, az egészen pontosan a négyzetszámok reciprokösszege:
+		\[ \dfrac{1}{x} = \sum\limits_{n=1}^{\infty} \dfrac{1}{n^2} = \dfrac{\pi^2}{6} \hspace{5mm} \Leftrightarrow \hspace{5mm} x = \dfrac{6}{\pi^2}  \]
+		Kész is vagyunk.
+	\end{proof}
+	
+	%1:11:00-ig	
 	
 	\chapter*{Végtelen  sok prím}
 	\markboth{VÉGTELEN SOK PRÍM}{}
@@ -3365,9 +3529,12 @@
 	
 	
 	\chapter*{Mi várható?}
-	\addcontentsline{toc}{chapter}{\color{red}Mi várható?\color{black}}
-	Jelenleg a jegyzet sok tekintetben hiányos. A vizsgaidőszakom alakulásától függően 3-4 héten belül (kb június elejére) valószínűleg a 10 féle bizonyítás maradék része bele fog kerülni.
+	\addcontentsline{toc}{chapter}{Mi várható?}
 	
+	Valószínűleg ez a jegyzet végleges változata! A jelzett hibákat természetesen javítani fogom, de a \textbf{8. előadás} végül NEM került kidolgozásra és NEM IS FOG ebben a vizsgaidőszakban.
+	
+	Akit érint, az ott található témaköröknek (Pitagoraszi számhármasok, Fermat-sejtés, RSA) érdemes utána olvasni Freud: Számelmélet könyvében, illetve meghallgatni az előadás hanganyagát.
+	%Jelenleg a jegyzet sok tekintetben hiányos. A vizsgaidőszakom alakulásától függően 3-4 héten belül (kb június elejére) valószínűleg a 10 féle bizonyítás maradék része bele fog kerülni.
 	\hypersetup
 	{
 		colorlinks = true,
@@ -3375,16 +3542,30 @@
 		urlcolor   = black,
 		linkcolor  = black
 	}
-	Tervezem pótolni a további elmaradt részeket is (8., 10. és 11. előadások), melyek egyelőre csak címszóként szerepelnek, de velük kapcsolatban határidőt még tippelni sem tudok, és nem is szeretnék ígérni semmit. Az utolsó előadáson vetített 3 diasorral kapcsolatban nem fog szerepelni semmi a jegyzetben, kivéve a 3 link:
+	%Tervezem pótolni a további elmaradt részeket is (8., 10. és 11. előadások), melyek egyelőre csak címszóként szerepelnek, de velük kapcsolatban határidőt még tippelni sem tudok, és nem is szeretnék ígérni semmit.
+	
+	Az utolsó előadáson vetített 3 diasorral kapcsolatban sem fog szerepelni semmi a jegyzetben, kivéve a 3 link:
 	\begin{enumerate}
 		\item{\href{https://www.renyi.hu/~gharcos/slides_polignac_mta.pdf}{Harcos Gergely: Prímek, Polignac, Polymath}}
 		\item{\href{http://web.cs.elte.hu/~csaba/bboard/2016/PJ_MTA_nov_beamer.pdf}{Pintz János: Prímek közti különbségekről}}
 		\item{\href{http://web.cs.elte.hu/~csaba/bboard/2016/Mersenne_2016_final.pdf}{Pethő Attila: Párhuzamosságok az ismert Mersenne prímszámok növekedése és az informatika fejlődése között}}
 	\end{enumerate}
+
+	Sok sikert kívánok mindenkinek a vizsgákhoz! :)
 	
-	Érdemes néha ránézni a jegyzetre, hátha frissült, ha más nem legalább annyira, hogy ide kiírom, mi az aktuális helyzet, mi várható. Sok sikert kívánok mindenkinek a vizsgákhoz! :)
+	%Érdemes néha ránézni a jegyzetre, hátha frissült, ha más nem legalább annyira, hogy ide kiírom, mi az aktuális helyzet, mi várható. Sok sikert kívánok mindenkinek a vizsgákhoz! :)
 	
-	\color{red} Még hiányzik a Csebisev-tétel, tervek szerint ez június elejére el fog készülni. A többi anyaggal kapcsolatban (Pitagoraszi számhármasok, Fermat-sejtés, RSA, völgytétel, tökéletes számok és relatív prímség valószínűsége) továbbra sem ígérek semmit. \color{black}
+	\begin{comment}
+	\color{red} A hiányzó részek a jegyzetből:
+	\begin{itemize}
+		\item{Pitagoraszi számhármasok (Algebra1-ből már volt)}
+		\item{$x^4+y^4=z^2$ végtelen leszállás elvével (???)}
+		\item{RSA: Ez biztosan nem fog elkészülni!}
+	\end{itemize}
+	\color{black}
+	\end{comment}
+	
+	 %A többi anyaggal kapcsolatban (Pitagoraszi számhármasok, Fermat-sejtés, RSA, völgytétel, tökéletes számok és relatív prímség valószínűsége) továbbra sem ígérek semmit. \color{black}
 	
 	
 	\chapter*{Mellékletek}
