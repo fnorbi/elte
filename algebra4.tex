@@ -115,11 +115,9 @@
 	
 	Hibák tehát előfordulhatnak a jegyzetben. Ha bárki bármilyen féle gondolati hibát, elírást, egyéb javítási ötletet talál és azt jelzi nekem, nagyon hálás leszek érte és mindenképpen figyelmet fordítok rá. Észrevételt jelezni (például) ebben a google táblázatban lehetséges:  \href{https://docs.google.com/spreadsheets/d/1be-alObB5R-k0JgOGCSRH83mbiVcythq--f85ti3RgA/edit#gid=0}{visszajelzés}.
 	
-	%Már csak az maradt hátra, hogy ezúton is köszönetet mondjak mindazoknak, akik segítették valamilyen módon a munkámat a félév során és tényleg a teljesség igénye nélkül csak néhány fontosabb név: Antal Kamilla, Csizi Bence, Fábián Terézia, Józsa Klári, Mészáros Nikolett, Meyer Réka, Nagy Zsófia, Ongai Erik, Proics Dóra, Szabó Fanni, Szauer Marcell, Vágó Csaba, Veszely Orsolya.
+	Már csak az maradt hátra, hogy ezúton is köszönetet mondjak mindazoknak, akik segítették valamilyen módon a munkámat a félév során. A teljesség igénye nélkül csak néhány fontosabb név: Antal Kamilla, Fábián Terézia, Nagy Zsófia, Ongai Erik, Palánkai Gabriella, Veszely Orsolya.
 	
-	%Köszönöm mindenkinek!
-	
-	Sok sikert a tanuláshoz!
+	Köszönöm mindenkinek! Sok sikert a tanuláshoz!
 	
 	Farkas Norbert Levente
 	\newpage
@@ -231,7 +229,7 @@
 		\[ a\cdot a' = 1 \]
 		Számoljuk ki a $b\cdot a \cdot a'$ szorzatot kétféle zárójelezéssel:
 		\begin{itemize}
-			\item $(b\cdot a) \cdot a' = 0\cdot a = 0$
+			\item $(b\cdot a) \cdot a' = 0\cdot a' = 0$
 			\item $b\cdot (a\cdot a') = b\cdot 1 = b$
 		\end{itemize}
 		Mivel az asszociativitás miatt mindegy hogyan zárójelezek, ugyanazt az eredményt kell kapnom. Ezért $b=0$, ami ellentmondás, hiszen feltettük, hogy $b\neq 0$.
@@ -367,11 +365,11 @@
 		Indirekt tegyük fel, hogy $f\cdot g$ nem primitív. Ez azt jelenti, hogy $\exists p$ prímszám, ami osztja $f\cdot g$-t, vagyis annak minden együtthatóját: $\forall k$-ra $p \mid c_k$. Mivel $f$ és $g$ primitívek, ezért ez a $p$ prímszám nem oszthatja $f$ minden együtthatóját. Legyen $i$ a legkisebb olyan szám, amire $p \nmid a_i$, hasonlóan $j$, melyre $p \nmid b_j$.
 		Tekintsük az $f\cdot g$ polinomban $x^{i+j}$ tagot:
 		\[ c_{i+j} \cdot x^{i+j}= \displaystyle\sum_{k+l=i+j} {(a_k\cdot x^k)\cdot (b_l\cdot x^l)} = \left( \displaystyle\sum_{k+l=i+j} a_k \cdot b_l \right) \cdot x^{i+j} \]
-		Hogyan néznek ki a jobboldali szumma tagjai? Hát az egyik éppen $a_i\cdot b_i$, melyről tudjuk, hogy $p \nmid a_i\cdot b_i$, mert ha osztaná, akkor a prím tulajdonság miatt az egyiküket is osztaná, amiről feltettük, hogy nem így van.
+		Hogyan néznek ki a jobboldali szumma tagjai? Hát az egyik éppen $a_i\cdot b_j$, melyről tudjuk, hogy $p \nmid a_i\cdot b_j$, mert ha osztaná, akkor a prím tulajdonság miatt az egyiküket is osztaná, amiről feltettük, hogy nem így van.
 		
 		A többi tag mindegyikében vagy $a_k$ alsó indexe kisebb mint $i$, ekkor $p\mid a_k$, vagy $b_l$ alsó indexe kisebb mint $j$, ekkor $p\mid b_l$. Tehát az összes többi tagra igaz, hogy $p\mid a_k\cdot b_l$.
 		
-		Összeségében $c_{i+j} = p\cdot \text{valami} + a_i b_i$ alakú, vagyis $p \nmid c_{i+j}$, ami ellentmondás, hiszen feltettük, hogy $f\cdot g$ minden együtthatóját osztja.
+		Összeségében $c_{i+j} = p\cdot \text{valami} + a_i b_j$ alakú, vagyis $p \nmid c_{i+j}$, ami ellentmondás, hiszen feltettük, hogy $f\cdot g$ minden együtthatóját osztja.
 	\end{proof}
 	Foglaljuk össze egy tételben a kapcsolatot $\mathbb{Z}$ és $\mathbb{Q}$ fölött irreducibilis polinomok között. (ez is valójában Algebra2-ből elhangzott már, ott sem bizonyított, de a Gauss-lemmákból már következik).
 	\begin{theo}
@@ -2169,7 +2167,7 @@
 	Látjuk tehát, hogy $a$-nak ez a bizonyos hatványa különleges szereppel rendelkezik, érdemes rá bevezetnünk egy jelölést.
 	
 	\begin{defi}[Legendre-szimbólum]
-		Legyen $p>2$ prím és $(a,p)=1$. Az $\left(\dfrac{a}{p}\right)$ (ejtsd: $a$ per $p$) Legendre-szimbólum (ejtsd: lözsand szimbólum) értéke $1$, amennyiben $a$ kvadratikus maradék modulo $p$, és $-1$, ha kvadratikus nemmaradék:
+		Legyen $p>2$ prím és $(a,p)=1$. Az $\left(\dfrac{a}{p}\right)$ (ejtsd: $a$ per $p$) Legendre-szimbólum (ejtsd: lözsandr szimbólum) értéke $1$, amennyiben $a$ kvadratikus maradék modulo $p$, és $-1$, ha kvadratikus nemmaradék:
 		\[ \left(\dfrac{a}{p}\right) = \begin{cases}
 		\ \ \ 1, & \text{ha $a$ kvadratikus maradék modulo $p$} \\
 		-1, & \text{ha $a$ kvadratikus nemmaradék modulo $p$} \\
@@ -2993,7 +2991,7 @@
 	\end{proof}
 
 	\textbf{Érdekességek:} Volt három érdekes formula, melyek előadáson előkerültek, de őket nem bizonyítottuk (ha valakit érdekel Freud: Számelmélet könyvében mindegyik megtalálható: 5.4.4. feladat b része, 5.4.1. Tétel és 5.4.2. Tétel). A három formula ($\pi(x)$ jelöli a prímek számát $x$-ig):
-	\[ \prod\limits_{p\leq x} p < e^x  \hspace{15mm} \text{és} \hspace{15mm} p_n \sim n\cdot \log n \hspace{15mm} \text{és} \hspace{15mm} \pi(x) \sim \dfrac{n}{\log n} \]
+	\[ \prod\limits_{p\leq x} p < e^x  \hspace{15mm} \text{és} \hspace{15mm} p_n \sim n\cdot \log n \hspace{15mm} \text{és} \hspace{15mm} \pi(x) \sim \dfrac{x}{\log x} \]
 	
 	\section{Csebisev-tétel}
 	
@@ -3066,12 +3064,12 @@
 	\textbf{Emlék:}
 	
 	\begin{theo}[Dirichlet-tétel]
-		Ha $(a,d)=1$ akkor végtelen sok $dk+a$ alakú prím van.
+		Ha $(a,d)=1$ akkor végtelen sok $d\cdot k+a$ alakú prím van.
 	\end{theo}
 	
 	Tanultunk Algebra1-ből a $d(n)$ számelméleti függvényről, ami az $n$ szám osztóinak a számát adja eredményül. Vizsgáljuk meg ennek egy különleges tulajdonságát.
 	
-	Minden prím esetén $d(p)=2$, hiszen bármely prímnek $2$ osztója van. Ugyanakkor $d(2^{n}) = n+1$, tehát a függvény tetszőleges nagy értéket is felvehet. Hogyan néz ki nagyjából kezdetben a függvény?
+	Bármely $p$ prím esetén $d(p)=2$, hiszen minden prímnek $2$ osztója van. Ugyanakkor például $d(2^{n}) = n+1$, tehát a függvény tetszőleges nagy értéket is felvehet. Hogyan néz ki nagyjából kezdetben a függvény?
 	
 	\begin{figure}[h] %h=here, t=top, b=bottom
 		\centering
@@ -3082,13 +3080,13 @@
 	Belátható, hogy bármilyen nagy völgy, illetve hegy található a grafikonon. Szemléletesen hegy alatt azt értjük, hogy egy kis érték után egy nagy, majd újra egy kicsi következik közvetlenül egymás után, völgy alatt pedig, hogy egy nagy érték után egy kicsi, majd újra nagy. Pontosabban, hogy ez mit is jelent, a következő tétel állításából érthető meg.
 	
 	\begin{theo}[Hegytétel]
-		Adott $k>0$ egész esetén $\exists n$ melyre $d(n)-d(n+1) > k$ és $d(n)-d(n-1)>k$
+		Adott $k>0$ egész esetén $\exists n$ melyre $d(n)-d(n+1) > k$, valamint $d(n)-d(n-1)>k$
 	\end{theo}
 
 	Ezt nem fogjuk belátni, de a párját, a völgytételt igen.
 	
 	\begin{theo}[Völgytétel]
-		Adott $k>0$ egész esetén $\exists n$ melyre $d(n-1)-d(n)>k$ és $d(n+1)-d(n)>k$.
+		Adott $k>0$ egész esetén $\exists n$ melyre $d(n-1)-d(n)>k$, valamint $d(n+1)-d(n)>k$.
 	\end{theo}
 
 	\begin{proof}
@@ -3097,20 +3095,20 @@
 		Tekintsük adott $k$ esetén a $t\cdot 3^{k+2}$ és a $q\cdot 2^{k+2}$ számokat. Elegendő volna belátni, hogy létezik olyan $p$ prím, melyre:
 		\[ t\cdot 3^{k+2} + 1 = p = q\cdot 2^{k+2} - 1  \]
 		vagyis amelyre a $t\cdot 3^{k+2}$, $p$ és $q\cdot 2^{k+2}$ egymást követő számok, és ez egy megfelelő völgy, hiszen az osztóik száma
-		\[ d(t\cdot 3^{k+2}) = k+3 \hspace{5mm} \text{és} \hspace{5mm} d(p) = 2 \hspace{5mm} \text{és} \hspace{5mm} d(q\cdot 2^{k+2}) = k+3  \]
-		vagyis a különbség mindkét esetben $k+3-k=k+1>k$.
+		\[ d(t\cdot 3^{k+2}) \geq k+3 \hspace{5mm} \text{és} \hspace{5mm} d(p) = 2 \hspace{5mm} \text{és} \hspace{5mm} d(q\cdot 2^{k+2}) \geq k+3  \]
+		vagyis a különbség mindkét esetben $\geq k+3-2=k+1>k$.
 		
 		Mért létezik ilyen $p$ prímszám? Mit kellene neki teljesítenie? Például $3^{k+2}$-vel osztva $1$ maradékot ad, illetve $2^{k+2}$-vel osztva $-1$ maradékot, tehát
 		\[ p\equiv 1\ (3^{k+2}) \hspace{5mm} \text{és} \hspace{5mm} p\equiv -1\ (2^{k+2})  \]
 		Mivel $(3^{k+2},2^{k+2}) = 1$, így ennek a szimultán kongruenciarendszernek egyértelműen létezik egy $p\equiv A$ megoldása modulo $2^{k+2}\cdot 3^{k+2} = 6^{k+2}$. Ez a megoldás
 		\[ p = s \cdot 6^{k+2} + A  \]
-		alakú, ami azt jelenti, hogy olyan prímre volna szükségünk, ami $s\cdot 6^{k+2} + A$ alakú, és minden ilyen prím esetén található egy $k$-tól függő völgy.
+		alakú, ami azt jelenti, hogy olyan prímre volna szükségünk, ami $s\cdot 6^{k+2} + A$ alakú, és minden ilyen prím esetén található egy $k$-tól függő völgy. Miért létezik ilyen alakú prím?
 		
-		Vegyük észre, hogy mivel $p\equiv 1\ (3^{k+2})$, így $3^{k+2}\mid p-1$ azaz $3\mid p-1$, azaz $3\nmid p$. Hasonlóan $2\nmid p$. 
+		Vegyük észre, hogy mivel $p\equiv 1\ (3^{k+2})$, így $3^{k+2}\mid p-1$ azaz $3\mid p-1$, azaz $3\nmid p$. Hasonlóan látható, hogy $2\nmid p$. 
 		
 		Ezek miatt $(A,6^{k+2}) = 1$, hiszen közös osztóként $1$-en kívül csak $2$-vel vagy $3$-mal osztható számok jöhetnének szóba, de az $A$ egyikkel sem lehet osztható, hiszen különben $s\cdot 6^{k+2} + A = p$ is osztható lenne vele, de $p$-ről láttuk, hogy sem $2$-vel, sem $3$-mal nem lehet osztható.
 		
-		A relatív prímség miatt alkalmazhatjuk a Dirichlet-tételt, azaz létezik $p = s\cdot 6^{k+2} + A$ alakú prímszám, méghozzá végtelen sok is. Ezek mind megfelelőek számunkra.
+		A relatív prímség miatt alkalmazhatjuk a Dirichlet-tételt, azaz létezik $p = 6^{k+2} \cdot s + A$ alakú prímszám, méghozzá végtelen sok is. Ezek mind megfelelőek számunkra.
 	\end{proof}
 	
 	
@@ -3120,14 +3118,14 @@
 	
 	\textbf{Emlék: }
 	
-	A $\sigma(n)$ függvény az $n$ osztóinak a számát adja értékül, képlete (feltéve, hogy $n$ kanonikus alakja szokásosan $p_1^{\alpha_1} \cdot \ldots \cdot p_k^{\alpha_k}$):
+	A $\sigma(n)$ függvény az $n$ osztóinak az összegét adja értékül, képlete (feltéve, hogy $n$ kanonikus alakja szokásosan $p_1^{\alpha_1} \cdot \ldots \cdot p_k^{\alpha_k}$):
 	\[ \sigma(n) = \dfrac{p_1^{\alpha_1+1}-1}{p_1 -1} \cdot \dfrac{p_2^{\alpha_2+1}-1}{p_2 -1} \cdot \ldots \cdot \dfrac{p_k^{\alpha_k+1}-1}{p_k -1} \]
 	Speciálisan $p$ prím esetén $\sigma(p) = \dfrac{p^2-1}{p-1} = p+1$, amin nem is lepődünk meg, hiszen $p$ osztói pontosan az $1$ és a $p$, és $\sigma(p)$ az osztók összege, vagyis $1+p$.
 	
 	Tanultuk azt is, hogy $\sigma$ multiplikatív függvény, tehát $(a,b)=1$ esetén $\sigma(a\cdot b)= \sigma(a)\cdot \sigma(b)$.
 	
 	\begin{defi}
-		Az $n\in \Z^{+}$ számot \textbf{tökéletes szám}nak nevezzük, amennyiben megegyezik valódi osztóinak összegével, azaz osztóinak kétszeresével: $\sigma(n) = 2n$
+		Az $n\in \Z^{+}$ számot \textbf{tökéletes szám}nak nevezzük, amennyiben megegyezik valódi osztóinak összegével, azaz osztóinak összege a szám kétszerese: $\sigma(n) = 2n$.
 	\end{defi}
 
 	Tökéletes szám például a $6=1+2+3$ vagy a $28=1+2+4+7+14$. Nem tudjuk hány tökéletes szám létezik, mint ahogy azt sem, hogy van-e páratlan.
@@ -3139,10 +3137,10 @@
 	\end{theo}
 
 	\begin{proof}
-		Az első irány triviális, ha $n=2^p\cdot (2^{p+1}-1)$ alakú, akkor mivel $(2^p,2^{p+1}-1)=1$ (előbbi csak $2$-vel osztható, utóbbi azzal pont nem), így $\sigma$ multiplikativitása miatt
-		\[ \sigma(n) = \sigma(2^p\cdot (2^{p+1} - 1)) = \sigma(2^p)\cdot \sigma(2^{p+1}-1)  \]
+		Az első irány triviális, ha $n= \color{red} 2^p\cdot (2^{p+1}-1) \color{black}$ alakú, akkor mivel $(2^p,2^{p+1}-1)=1$ (előbbi csak $2$-vel osztható, utóbbi azzal pont nem), így $\sigma$ multiplikativitása miatt
+		\[ \sigma(n) = \sigma\Big(2^p\cdot (2^{p+1} - 1)\Big) = \sigma(2^p)\cdot \sigma(2^{p+1}-1)  \]
 		majd használva $\sigma$ képletét, és hogy $2^{p+1}-1$ prím:
-		\[ = \dfrac{2^{p+1}-1}{2-1} \cdot 2^{p+1} = 2\cdot 2^p \cdot (2^{p+1}-1) = 2n  \]
+		\[ = \dfrac{2^{p+1}-1}{2-1} \cdot (2^{p+1}-1+1)  = (2^{p+1}-1) \cdot 2^{p+1} = 2\cdot \color{red} 2^p \cdot  (2^{p+1}-1) \color{black} = 2n  \]
 		Azaz $\sigma(n) = 2n$, így $n$ tökéletes.
 		
 		Nézzük a másik irányt és lássuk be, hogy minden páros tökéletes szám ilyen alakú. Legyen $\alpha$ a legnagyobb olyan pozitív egész, melyre $2^{\alpha}\mid n$. Ekkor
@@ -3158,14 +3156,14 @@
 		Mivel $2^{\alpha+1} - 1$ osztja a jobboldalt, így a baloldalt is, de $(2^{\alpha+1},2^{\alpha+1}-1) = 1$, így $m$-et osztja:
 		\[ 2^{\alpha+1}-1\mid m \hspace{5mm} \Leftrightarrow \hspace{5mm} \exists k\colon m = (2^{\alpha+1}-1)\cdot k  \]
 		a \ref{tökéletes} egyenletbe $m=(2^{\alpha+1}-1)\cdot k$-t helyettesítve
-		\[ 2^{\alpha+1}\cdot (2^{\alpha+1}-1)\cdot k   = (2^{\alpha+1}-1) \cdot \sigma\left((2^{\alpha+1}-1)\cdot k\right) \]
-		egyszerűsítve $2^{\alpha+1}-1$-gyel\footnote{Az egyszerűsítés elvégezhető, hiszen ha $2^{\alpha+1}-1 = 0$ volna, akkor $2^{\alpha+1} \neq 1$, azaz $\alpha+1 = 0$, így $\alpha = -1$, ami lehetetlen, hiszen $\alpha > 0$, mert $n$-ről feltettük, hogy páros.}
+		\[ 2^{\alpha+1}\cdot (2^{\alpha+1}-1)\cdot k   = (2^{\alpha+1}-1) \cdot \sigma\Big((2^{\alpha+1}-1)\cdot k\Big) \]
+		egyszerűsítve $2^{\alpha+1}-1$-gyel\footnote{Az egyszerűsítés elvégezhető, hiszen ha $2^{\alpha+1}-1 = 0$ volna, akkor $2^{\alpha+1} = 1$, azaz $\alpha+1 = 0$, így $\alpha = -1$, ami lehetetlen, hiszen $\alpha > 0$, mert $n$-ről feltettük, hogy páros.}
 		\begin{equation}\label{sigma}
-			2^{\alpha+1} \cdot k = \sigma\left((2^{\alpha+1}-1)\cdot k\right)
+			2^{\alpha+1} \cdot k = \sigma\Big((2^{\alpha+1}-1)\cdot k\Big)
 		\end{equation}
-		Azt fogjuk belátni, hogy $k=1$. Indirekt tegyük fel, hogy $k\neq 1$. Ekkor a $(2^{\alpha+1}-1)\cdot k$ számnak különböző\footnote{Itt a harmadik azért nem lehet $k$, mivel akkor $2^{\alpha+1}-1 = 1$ volna, azaz $2^{\alpha+1} = 2$ így $\alpha = 0$, de $\alpha > 0$, mert $n$ páros.} osztói $1$, $k$, $k\cdot(2^{\alpha+1}-1)$. Ezek szerint az osztóinak összege alulról becsülhető:
-		\[ 2^{\alpha+1} \cdot k = \sigma\left( (2^{\alpha+1}-1)\cdot k \right) \geq 1+k+k\cdot (2^{\alpha+1}-1) = 1 + k\cdot 2^{\alpha+1}  \]
-		azaz $0>1$, ami nyilvánvaló ellentmondás.
+		Azt fogjuk belátni, hogy $k=1$. Indirekt tegyük fel, hogy $k\neq 1$. Ekkor a $(2^{\alpha+1}-1)\cdot k$ számnak különböző\footnote{Itt a harmadik azért nem lehet $k$, mivel akkor $2^{\alpha+1}-1 = 1$ volna, azaz $2^{\alpha+1} = 2$ így $\alpha = 0$, de $\alpha > 0$, mert $n$ páros.} osztói az $1$, a $k$, és a $k\cdot(2^{\alpha+1}-1)$. Ezek szerint az osztóinak összege alulról becsülhető ezen három osztójának összegével:
+		\[ 2^{\alpha+1} \cdot k = \sigma\Big( (2^{\alpha+1}-1)\cdot k \Big) \geq 1+k+k\cdot (2^{\alpha+1}-1) = 1 + k\cdot 2^{\alpha+1}  \]
+		azaz $0\geq 1$, ami nyilvánvaló ellentmondás.
 		
 		Így tehát $k=1$, ami azt jelenti, hogy $m=2^{\alpha+1}-1$, ahonnan $\ref{sigma}$ miatt
 		\[ 2^{\alpha+1} = \sigma(2^{\alpha+1}-1)  \]
@@ -3180,7 +3178,7 @@
 	
 	\section{Melyik fákat látom?}
 	
-	Tegyük fel, hogy az koordináta-rendszer origójában állunk és minden rácspontban (vagyis egész koordinátájú pontban) van egy fa, kivéve ahol mi vagyunk. A kérdés: Hány százalékát látjuk a fáknak? Na persze itt jó matematikus lévén felteszünk néhány igen furcsa dolgot, például hogy egyszerre látunk az összes irányba, tehát valójában csak azokat a fákat nem látjuk, akit egy másik fa (akit látunk) takar.
+	Tegyük fel, hogy a koordináta-rendszer origojában állunk és minden rácspontban (vagyis egész koordinátájú pontban) van egy fa, kivéve ahol mi vagyunk. A kérdés: Hány százalékát látjuk a fáknak? Na persze itt jó matematikus lévén felteszünk néhány igen furcsa dolgot, például hogy egyszerre látunk az összes irányba, tehát valójában csak azokat a fákat nem látjuk, akit egy másik fa (akit látunk) takar.
 	
 	\begin{figure}[h] %h=here, t=top, b=bottom
 		\centering
@@ -3188,9 +3186,9 @@
 		\caption{A fák közepén állok, körbevesznek $(a;b)$ párok}\label{fak}
 	\end{figure}
 
-	Például látjuk a $(2;1)$, illetve a $(3;1)$ koordinátájú pontokban lévő fákat, de a $(4;2)$-ben lévőt nem, mert a $(2;1)$ takarja. Általánosan is könnyen látható, hogy pontosan azokat a fákat látjuk, melyek $(a;b)$ koordinátáira igaz, hogy $(a,b)=1$, tehát a kérdés valójában: mi a valószínűsége annak, hogy két egész szám relatív prím?
+	Például látjuk a $(2;1)$, illetve a $(3;1)$ koordinátájú pontokban lévő fákat, de a $(4;2)$-ben lévőt nem, mert a $(2;1)$ takarja. Általánosan is könnyen látható, hogy pontosan azokat a fákat látjuk, melyek $(a;b)$ koordinátáira igaz, hogy $(a,b)=1$, tehát a kérdés valójában: mi a valószínűsége annak, hogy két egész szám relatív prímek?
 	
-	Az ehhez kapcsolódó tétel bizonyításához szükségünk lesz egy másik nevezetes tételre, amiben nem vagyok biztos, hogy korábban szerepelt (talán Egyváltozós analízis2-ből említettük, de nem láttuk be), ezt először kimondom, de nem látom be, előadáson is csak hivatkoztunk rá.
+	Az ehhez kapcsolódó tétel bizonyításához szükségünk lesz egy másik nevezetes tételre, amiben nem vagyok biztos, hogy korábban szerepelt (talán Egyváltozós analízis 2-ből említettük, de nem láttuk be), ezt először kimondom, de nem bizonyítom, előadáson is csak hivatkoztunk rá.
 	
 	\begin{theo}
 		A négyzetszámok reciprokösszege
@@ -3205,12 +3203,12 @@
 	\end{theo}
 
 	\begin{proof}
-		Mit jelent az, hogy az $a$ és $b$ számok relatív prímek? Ez egy elég tág kérdés, mit jelent ez a $2$ prímszámra nézve? Egy dolog biztos, nem oszthatja mindkét számot. Mi a valószínűsége annak, hogy a $2$ nem osztja $a$ és $b$ számot is. Tekintsük a komplementer eseményt, mi a valószínűsége, hogy a $2$ osztja $a$-t és $b$-t is. Na ez már könnyű, függetlenek az események és a számok fele osztható $2$-vel, így:
-		\[ P\left( 2\nmid (a,b)\right) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2}  \]
+		Mit jelent az, hogy az $a$ és $b$ számok relatív prímek? Ez egy elég tág kérdés, mit jelent ez a $2$ prímszámra nézve? Egy dolog biztos, nem oszthatja mindkét számot. Mi a valószínűsége annak, hogy a $2$ nem osztja $a$ vagy $b$ számot. Tekintsük a komplementer eseményt, mi a valószínűsége, hogy a $2$ osztja $a$-t és $b$-t is. Na ez már könnyű, függetlenek az események és a számok fele osztható $2$-vel, így:
+		\[ P\Big( 2\nmid (a,b)\Big) = 1 - P( a\ \text{páros}\ \wedge\ b\ \text{páros}  ) = 1 - P( a\ \text{páros} ) \cdot P( b\ \text{páros} ) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2}  \]
 		Folytassuk a $3$-mal, mivel az a következő prímszám. Hasonlóan gondolható végig, ismét komplementer eseménnyel a valószínűség:
-		\[ P\left(3\nmid (a,b)\right) = 1 - \dfrac{1}{3} \cdot \dfrac{1}{3} \]
+		\[ P\Big(3\nmid (a,b)\Big) = 1 - \dfrac{1}{3} \cdot \dfrac{1}{3} \]
 		Ezt végig kell nézni az összes többi prímre is:
-		\[ x = P\Big( (a,b) = 1   \Big) = \prod_{p \text{ prím}} P\left( p\nmid (a,b) \right) = \prod_{p \text{ prím}} \left( 1- \dfrac{1}{p^2}   \right) = \left( 1 - \dfrac{1}{2^2}  \right) \cdot \left( 1 - \dfrac{1}{3^2}  \right) \cdot \ldots  \]
+		\[ x = P\Big( (a,b) = 1   \Big) = \prod_{p \text{ prím}} P\Big( p\nmid (a,b) \Big) = \prod_{p \text{ prím}} \left( 1- \dfrac{1}{p^2}   \right) = \left( 1 - \dfrac{1}{2^2}  \right) \cdot \left( 1 - \dfrac{1}{3^2}  \right) \cdot \ldots  \]
 		Tekintsük az egésznek a reciprokát:
 		\[ \dfrac{1}{x} = \dfrac{1}{\left( 1 - \dfrac{1}{2^2}  \right) \cdot \left( 1 - \dfrac{1}{3^2}  \right) \cdot \ldots} = \dfrac{1}{1-\frac{1}{2^2}} \cdot \dfrac{1}{1-\frac{1}{3^2}} \cdot \ldots  \]
 		Vegyük észre, hogy mivel a mértani sor összegképlete szerint

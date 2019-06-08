@@ -229,7 +229,7 @@
 		\[ a\cdot a' = 1 \]
 		Számoljuk ki a $b\cdot a \cdot a'$ szorzatot kétféle zárójelezéssel:
 		\begin{itemize}
-			\item $(b\cdot a) \cdot a' = 0\cdot a = 0$
+			\item $(b\cdot a) \cdot a' = 0\cdot a' = 0$
 			\item $b\cdot (a\cdot a') = b\cdot 1 = b$
 		\end{itemize}
 		Mivel az asszociativitás miatt mindegy hogyan zárójelezek, ugyanazt az eredményt kell kapnom. Ezért $b=0$, ami ellentmondás, hiszen feltettük, hogy $b\neq 0$.
@@ -365,11 +365,11 @@
 		Indirekt tegyük fel, hogy $f\cdot g$ nem primitív. Ez azt jelenti, hogy $\exists p$ prímszám, ami osztja $f\cdot g$-t, vagyis annak minden együtthatóját: $\forall k$-ra $p \mid c_k$. Mivel $f$ és $g$ primitívek, ezért ez a $p$ prímszám nem oszthatja $f$ minden együtthatóját. Legyen $i$ a legkisebb olyan szám, amire $p \nmid a_i$, hasonlóan $j$, melyre $p \nmid b_j$.
 		Tekintsük az $f\cdot g$ polinomban $x^{i+j}$ tagot:
 		\[ c_{i+j} \cdot x^{i+j}= \displaystyle\sum_{k+l=i+j} {(a_k\cdot x^k)\cdot (b_l\cdot x^l)} = \left( \displaystyle\sum_{k+l=i+j} a_k \cdot b_l \right) \cdot x^{i+j} \]
-		Hogyan néznek ki a jobboldali szumma tagjai? Hát az egyik éppen $a_i\cdot b_i$, melyről tudjuk, hogy $p \nmid a_i\cdot b_i$, mert ha osztaná, akkor a prím tulajdonság miatt az egyiküket is osztaná, amiről feltettük, hogy nem így van.
+		Hogyan néznek ki a jobboldali szumma tagjai? Hát az egyik éppen $a_i\cdot b_j$, melyről tudjuk, hogy $p \nmid a_i\cdot b_j$, mert ha osztaná, akkor a prím tulajdonság miatt az egyiküket is osztaná, amiről feltettük, hogy nem így van.
 		
 		A többi tag mindegyikében vagy $a_k$ alsó indexe kisebb mint $i$, ekkor $p\mid a_k$, vagy $b_l$ alsó indexe kisebb mint $j$, ekkor $p\mid b_l$. Tehát az összes többi tagra igaz, hogy $p\mid a_k\cdot b_l$.
 		
-		Összeségében $c_{i+j} = p\cdot \text{valami} + a_i b_i$ alakú, vagyis $p \nmid c_{i+j}$, ami ellentmondás, hiszen feltettük, hogy $f\cdot g$ minden együtthatóját osztja.
+		Összeségében $c_{i+j} = p\cdot \text{valami} + a_i b_j$ alakú, vagyis $p \nmid c_{i+j}$, ami ellentmondás, hiszen feltettük, hogy $f\cdot g$ minden együtthatóját osztja.
 	\end{proof}
 	Foglaljuk össze egy tételben a kapcsolatot $\mathbb{Z}$ és $\mathbb{Q}$ fölött irreducibilis polinomok között. (ez is valójában Algebra2-ből elhangzott már, ott sem bizonyított, de a Gauss-lemmákból már következik).
 	\begin{theo}
@@ -2167,7 +2167,7 @@
 	Látjuk tehát, hogy $a$-nak ez a bizonyos hatványa különleges szereppel rendelkezik, érdemes rá bevezetnünk egy jelölést.
 	
 	\begin{defi}[Legendre-szimbólum]
-		Legyen $p>2$ prím és $(a,p)=1$. Az $\left(\dfrac{a}{p}\right)$ (ejtsd: $a$ per $p$) Legendre-szimbólum (ejtsd: lözsand szimbólum) értéke $1$, amennyiben $a$ kvadratikus maradék modulo $p$, és $-1$, ha kvadratikus nemmaradék:
+		Legyen $p>2$ prím és $(a,p)=1$. Az $\left(\dfrac{a}{p}\right)$ (ejtsd: $a$ per $p$) Legendre-szimbólum (ejtsd: lözsandr szimbólum) értéke $1$, amennyiben $a$ kvadratikus maradék modulo $p$, és $-1$, ha kvadratikus nemmaradék:
 		\[ \left(\dfrac{a}{p}\right) = \begin{cases}
 		\ \ \ 1, & \text{ha $a$ kvadratikus maradék modulo $p$} \\
 		-1, & \text{ha $a$ kvadratikus nemmaradék modulo $p$} \\
@@ -2991,7 +2991,7 @@
 	\end{proof}
 
 	\textbf{Érdekességek:} Volt három érdekes formula, melyek előadáson előkerültek, de őket nem bizonyítottuk (ha valakit érdekel Freud: Számelmélet könyvében mindegyik megtalálható: 5.4.4. feladat b része, 5.4.1. Tétel és 5.4.2. Tétel). A három formula ($\pi(x)$ jelöli a prímek számát $x$-ig):
-	\[ \prod\limits_{p\leq x} p < e^x  \hspace{15mm} \text{és} \hspace{15mm} p_n \sim n\cdot \log n \hspace{15mm} \text{és} \hspace{15mm} \pi(x) \sim \dfrac{n}{\log n} \]
+	\[ \prod\limits_{p\leq x} p < e^x  \hspace{15mm} \text{és} \hspace{15mm} p_n \sim n\cdot \log n \hspace{15mm} \text{és} \hspace{15mm} \pi(x) \sim \dfrac{x}{\log x} \]
 	
 	\section{Csebisev-tétel}
 	
@@ -3118,14 +3118,14 @@
 	
 	\textbf{Emlék: }
 	
-	A $\sigma(n)$ függvény az $n$ osztóinak a számát adja értékül, képlete (feltéve, hogy $n$ kanonikus alakja szokásosan $p_1^{\alpha_1} \cdot \ldots \cdot p_k^{\alpha_k}$):
+	A $\sigma(n)$ függvény az $n$ osztóinak az összegét adja értékül, képlete (feltéve, hogy $n$ kanonikus alakja szokásosan $p_1^{\alpha_1} \cdot \ldots \cdot p_k^{\alpha_k}$):
 	\[ \sigma(n) = \dfrac{p_1^{\alpha_1+1}-1}{p_1 -1} \cdot \dfrac{p_2^{\alpha_2+1}-1}{p_2 -1} \cdot \ldots \cdot \dfrac{p_k^{\alpha_k+1}-1}{p_k -1} \]
 	Speciálisan $p$ prím esetén $\sigma(p) = \dfrac{p^2-1}{p-1} = p+1$, amin nem is lepődünk meg, hiszen $p$ osztói pontosan az $1$ és a $p$, és $\sigma(p)$ az osztók összege, vagyis $1+p$.
 	
 	Tanultuk azt is, hogy $\sigma$ multiplikatív függvény, tehát $(a,b)=1$ esetén $\sigma(a\cdot b)= \sigma(a)\cdot \sigma(b)$.
 	
 	\begin{defi}
-		Az $n\in \Z^{+}$ számot \textbf{tökéletes szám}nak nevezzük, amennyiben megegyezik valódi osztóinak összegével, azaz osztóinak kétszeresével: $\sigma(n) = 2n$
+		Az $n\in \Z^{+}$ számot \textbf{tökéletes szám}nak nevezzük, amennyiben megegyezik valódi osztóinak összegével, azaz osztóinak összege a szám kétszerese: $\sigma(n) = 2n$.
 	\end{defi}
 
 	Tökéletes szám például a $6=1+2+3$ vagy a $28=1+2+4+7+14$. Nem tudjuk hány tökéletes szám létezik, mint ahogy azt sem, hogy van-e páratlan.
