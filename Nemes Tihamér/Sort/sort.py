@@ -11,19 +11,23 @@ def kiir(adatok):
     for r in adatok:
         print (r)
 
-#n = input() Python 2
-n = int(input())
-adatok = []
-for i in range(0,n):
-    #s = raw_input() Python 2
-    s = input()
-    temp = s.split()
-    rec = Rec(temp[0],temp[1])
-    adatok.append(rec)
+def main():
+    #n = input() Python 2
+    n = int(input())
+    adatok = []
+    for i in range(0,n):
+        #s = raw_input() Python 2
+        s = input()
+        temp = s.split()
+        rec = Rec(temp[0],temp[1])
+        adatok.append(rec)
 
-kiir(adatok)
-print()
+    kiir(adatok)
+    print()
 
-adatok.sort()
+    adatok.sort()
+    #adatok = sorted(adatok, reverse = True)
 
-kiir(adatok)
+    kiir(adatok)
+    
+main()
