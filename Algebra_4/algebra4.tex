@@ -354,14 +354,14 @@
 		\begin{enumerate}
 			\item Ha $f\in \mathbb{Z}[x]$ primitív, akkor: $f$ irred. $\mathbb{Z}$ fölött $\Leftrightarrow f$ irred. $\mathbb{Q}$ fölött.
 			\item Ha $f,g\in \mathbb{Z}[x]$ primitívek, akkor: $f\mid g$-t $\mathbb{Z}$ fölött $\Leftrightarrow$ $f\mid g$-t $\mathbb{Q}$ fölött.
-			\item Ha $f\in \mathbb{Z}[x]$ primitív és $g,h\in \mathbb{Q}[x]$ és $f=g\cdot h$ $\Rightarrow \exists G,H\in \mathbb{Z}[x]$, melyre $f=G\cdot H$ és $G=\dfrac{A}{B}\cdot g$ és $H=\dfrac{C}{D}\cdot h$
+			\item Ha $f\in \mathbb{Z}[x]$ primitív és $g,h\in \mathbb{Q}[x]$ és $f=g\cdot h$ $\Rightarrow \exists G,H\in \mathbb{Z}[x]$, melyre $f=G\cdot H$ és $\exists A, B, C, D\in \Z[x]$ melyre $G=\dfrac{A}{B}\cdot g$ és $H=\dfrac{C}{D}\cdot h$
 			\item Ha $f,g \in \mathbb{Z}[x]$ primitívek $\Rightarrow f\cdot g$ is primitív.
 		\end{enumerate}
 	\end{theo}
 	Az első 3 bizonyítását egyelőre elhagyjuk, de a 4. esetet nézzük meg.
 	\begin{proof}
 		Legyen $f=a_n\cdot x^n + a_{n-1}\cdot x^{n-1} + \ldots + a_1\cdot x + a_0$ és $g=b_m\cdot x^m + b_{m-1}\cdot x^{m-1} + \ldots + b_1\cdot x + b_0$, szorzatuk
-		\[ f\cdot g = c_k\cdot x^k + \ldots + c_1 \cdot x + c_0  \]
+		\[ f\cdot g = c_r\cdot x^r + \ldots + c_1 \cdot x + c_0  \]
 		Indirekt tegyük fel, hogy $f\cdot g$ nem primitív. Ez azt jelenti, hogy $\exists p$ prímszám, ami osztja $f\cdot g$-t, vagyis annak minden együtthatóját: $\forall k$-ra $p \mid c_k$. Mivel $f$ és $g$ primitívek, ezért ez a $p$ prímszám nem oszthatja $f$ minden együtthatóját. Legyen $i$ a legkisebb olyan szám, amire $p \nmid a_i$, hasonlóan $j$, melyre $p \nmid b_j$.
 		Tekintsük az $f\cdot g$ polinomban $x^{i+j}$ tagot:
 		\[ c_{i+j} \cdot x^{i+j}= \displaystyle\sum_{k+l=i+j} {(a_k\cdot x^k)\cdot (b_l\cdot x^l)} = \left( \displaystyle\sum_{k+l=i+j} a_k \cdot b_l \right) \cdot x^{i+j} \]
@@ -708,7 +708,7 @@
 		
 		\textit{2. biz.:}
 		
-		Indirekt tegyük fel, hogy $m_\alpha = f(x)\cdot g(x)$, és $f(x)$ és $g(x)$ sem egység. Mivel test fölött vagyunk, egységek a numnulla konstansok, vagyis $f$ és $g$ foka is legalább 1 kell legyen. De mivel fokszámaik összege $m_\alpha(x)$ foka, ezért mindkettő kisebb fokú $m_\alpha(x)$-nél. Helyettesítsünk $\alpha$-t:
+		Indirekt tegyük fel, hogy $m_\alpha = f(x)\cdot g(x)$, és $f(x)$ és $g(x)$ sem egység. Mivel test fölött vagyunk, egységek a nemnulla konstansok, vagyis $f$ és $g$ foka is legalább 1 kell legyen. De mivel fokszámaik összege $m_\alpha(x)$ foka, ezért mindkettő kisebb fokú $m_\alpha(x)$-nél. Helyettesítsünk $\alpha$-t:
 		\[ 0 = m_\alpha(\alpha) = f(\alpha) \cdot g(\alpha)  \]
 		%ahol $f(\alpha)$ és $g(\alpha)$ mindketten $K(\alpha)$ testbeli elemek, mivel pedig test nullosztómentes, 
 		ezért $f(\alpha)=0$ vagy $g(\alpha)=0$. Amennyiben $f(\alpha)=0$, akkor találtunk egy polinomot aminek gyöke az $\alpha$ és foka kisebb mint $m_\alpha(x)$-nek, ez ellentmondás (különben $m_\alpha(x)$ nem lenne minimálpolinom). Hasonlóan $g(\alpha)=0$ is ellentmondást ad.
@@ -1031,7 +1031,7 @@
 	\end{theo}
 
 	\begin{proof}
-		Amennyiben $\deg f = 1$, akkor látható, hogy az állítások ekvivalensek. Hiszen ha $f=ax+b$, akkor nyilván van gyöke: $-\frac{b}{a}$, pontosan 1 gyöke van, felírható a gyöktényezős alakja: $f(x)=a\cdot (x-\frac{b}{a})$, és irreducibilis, hiszen bármely test fölötti 1-fokú polinomok irreducibilisek.
+		Amennyiben $\deg f = 1$, akkor látható, hogy az állítások ekvivalensek. Hiszen ha $f=ax+b$, akkor nyilván van gyöke: $-\frac{b}{a}$, pontosan 1 gyöke van, felírható a gyöktényezős alakja: $f(x)=a\cdot (x+\frac{b}{a})$, és irreducibilis, hiszen bármely test fölötti 1-fokú polinomok irreducibilisek.
 		
 		Ha pedig $\deg f > 1$ és algebrailag zárt (tehát teljesül az 1. állítás), abból következik a másik három is.
 		
@@ -1239,7 +1239,7 @@
 		helyettesítve $y$-t az első egyenletbe
 		\[ x^2+(mx+t)^2+ax+b(mx+t)+c=0  \]
 		rendezve
-		\[ \underbrace{(m+1)}_{A}\cdot x^2 + \underbrace{(2mt+a+mb)}_{B}\cdot x + \underbrace{(t^2+ bt +c)}_{C} =0  \]
+		\[ \underbrace{(m^2+1)}_{A}\cdot x^2 + \underbrace{(2mt+a+mb)}_{B}\cdot x + \underbrace{(t^2+ bt +c)}_{C} =0  \]
 		bevezetve $A,B,C$ rövidítéseket
 		\[ Ax^2+Bx+C = 0 \]
 		egyenlethez jutunk, ahonnan $x$-re kapható megoldás
@@ -1531,8 +1531,10 @@
 		
 		\textit{$R\subseteq L$:}
 		
-		Legyen $a\in R$ tetszőleges. Ekkor nyilván $a\in L$ is teljesül, hiszen a gyűrűben van egységelem, jelölje ezt $1$. Ekkor viszont $(a,1)\in \mathbb{Q}_R$, melynek képe pedig
-		\[ \varphi\Big((a,1)\Big) = \dfrac{a}{1} = a\cdot 1^{-1} = a\cdot 1 = a\in L  \]
+		Legyen $a\in R$ tetszőleges. Ha $a\neq 0$ akkor nyilván $a\in L$ is teljesül, hiszen $a^2\in R$. Ekkor viszont $(a^2,a)\in \mathbb{Q}_R$, melynek képe pedig
+		\[ \varphi\Big((a^2,a)\Big) = \dfrac{a^2}{a} = a^2\cdot a^{-1} = a\in L  \]
+		Amennyiben $a = 0$, akkor ahhoz, hogy beszélhessünk az $R$ hányadostestéről szükségünk van egy $b\neq 0$, $b\in R$ elemre is. Ekkor viszont
+		\[ \varphi\Big((0,b)\Big) = \dfrac{0}{b} = 0\cdot b^{-1} = 0 \in L  \]
 		
 		\textit{$L\subseteq K$:}
 		
@@ -1579,7 +1581,7 @@
 	\textbf{Emlék:} Az Euler-féle $\varphi$-függvény adja meg $1$-től $n$-ig az $n$-hez relatív prímek számát. Egyben ez határozta meg a primitív egységgyökök számát is, képlete (ha $n=p_1^{\alpha_1}\cdot \ldots \cdot p_k^{\alpha_k}$ kanonikus alakú):
 	\[ \varphi(n) = \prod_{i=1}^{k} p_i^{\alpha_i}-p_i^{\alpha_i-1}    \]
 	
-	\textbf{Emlék:} Az $n$-edik körosztási polinom definíció szerint aminek gyökei az $n$-edik primitív egységgyökök (jelölje őket: $\xi_1,\xi_1,\ldots,\xi_{\varphi(n)}$):
+	\textbf{Emlék:} Az $n$-edik körosztási polinom definíció szerint aminek gyökei az $n$-edik primitív egységgyökök (jelölje őket: $\xi_1,\xi_2,\ldots,\xi_{\varphi(n)}$):
 	\[ \varPhi_n(x) = \prod_{i=1}^{\varphi(n)} (x-\xi_i) \]
 	Tanultuk (bizonyítás nélkül) Algebra2-ből, hogy a körosztási polinomok 1 főegyütthatós, irreducibilis polinomok $\mathbb{Q}$ fölött.
 
@@ -1674,7 +1676,7 @@
 		\begin{cases*}
 		x \equiv a_1 \hspace{1mm} (c_1) \\
 		x \equiv a_2 \hspace{1mm} (c_2) \\
-		x \equiv a_2 \hspace{1mm} (c_2) \\
+		x \equiv a_3 \hspace{1mm} (c_3) \\
 		\vdots \\
 		x \equiv a_k \hspace{1mm} (c_k) \\
 		\end{cases*}
@@ -2643,7 +2645,7 @@
 		
 		\begin{enumerate}[label = (\alph*)]
 			\item{Az $5$ egy $4k+1$ alakú prím, tehát egyetlen dolgunk, hogy felírjuk két-négyzetszám összegeként:
-			\[ 5 = 1+4 = 1^2+4^2 = (1+2i)\cdot (1-2i)  \]	
+			\[ 5 = 1+4 = 1^2+2^2 = (1+2i)\cdot (1-2i)  \]	
 			Tudjuk, hogy a $4k+1$ alakú prímek $2$ olyan Gauss-prímre bomlanak fel, melyek egymás konjugáltjai, de nem egységszeresei, tehát az $5$-nek ez a két prímosztója van, vagyis az $5$ kanonikus alakja $5=(1+2i)^1\cdot (1-2i)^1$.
 		}
 		\item{Most picit hosszadalmasabb dolgunk lesz, de mindenekelőtt bontsuk fel a valós és a képzetes részt prímtényezőkre és emeljük ki a legnagyobb közös osztót:
@@ -2973,8 +2975,8 @@
 	\begin{proof}
 		Írjuk fel definíció szerint a binomiális együtthatót:
 		\[ {2n\choose n} = \dfrac{(2n)!}{(n!)^2}  \]
-		Használjuk a \ref{faktkan}. tételben megszerzett tudásunkat és írjuk fel a számláló és a nevező kanonikus alakját. Egy adott $p$ prímszám esetén ha annak $(2n)!$ kanonikus alakjában a kitevője $\alpha$, valamint $n!$ esetén $\beta$, akkor végül $\alpha-2\beta$ lesz a kitevő a hatványozás szabályai szerint. Tehát $p$ kitevője:
-		\[ \alpha - 2\beta = \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left \lfloor \dfrac{2n}{p^i} \right \rfloor - 2 \cdot \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left \lfloor \dfrac{n}{p^i} \right \rfloor  \]
+		Használjuk a \ref{faktkan}. tételben megszerzett tudásunkat és írjuk fel a számláló és a nevező kanonikus alakját. Egy adott $p$ prímszám esetén ha annak $(2n)!$ kanonikus alakjában a kitevője $\beta$, valamint $n!$ esetén $\gamma$, akkor végül $\beta-2\gamma$ lesz a kitevő a hatványozás szabályai szerint. Tehát $p$ kitevője:
+		\[ \beta - 2\gamma = \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left \lfloor \dfrac{2n}{p^i} \right \rfloor - 2 \cdot \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left \lfloor \dfrac{n}{p^i} \right \rfloor  \]
 		Igaz, hogy a második szumma esetében elegendő lenne $p^i\leq n$-ig menni, de korábban (az említett tétel bizonyításakor) megbeszéltük, hogy ha tovább is megyünk az sem gond, mert csak $0$-kat adunk össze. Csupán azért választjuk most ezt a feltételt, mert így láthatóan összevonhatóak a szummák:
 		\[ = \sum\limits_{\substack{p^i\leq 2n \\ p^{i+1}>2n}} \left( \left \lfloor \dfrac{2n}{p^i} \right \rfloor - 2\cdot  \left \lfloor \dfrac{n}{p^i} \right \rfloor \right) \]
 		Az egészrész definíciója szerint $x-1< \lfloor x \rfloor \leq x$, így
@@ -3125,7 +3127,7 @@
 	Tanultuk azt is, hogy $\sigma$ multiplikatív függvény, tehát $(a,b)=1$ esetén $\sigma(a\cdot b)= \sigma(a)\cdot \sigma(b)$.
 	
 	\begin{defi}
-		Az $n\in \Z^{+}$ számot \textbf{tökéletes szám}nak nevezzük, amennyiben megegyezik valódi osztóinak összegével, azaz osztóinak összege a szám kétszerese: $\sigma(n) = 2n$.
+		Az $n\in \Z^{+}$ számot \textbf{tökéletes szám}nak nevezzük, amennyiben valódi osztóinak összegénél egyel több, azaz osztóinak összege a szám kétszerese: $\sigma(n) = 2n$.
 	\end{defi}
 
 	Tökéletes szám például a $6=1+2+3$ vagy a $28=1+2+4+7+14$. Nem tudjuk hány tökéletes szám létezik, mint ahogy azt sem, hogy van-e páratlan.
@@ -3133,7 +3135,7 @@
 	\textbf{Emlék:} Mersenne-prímeknek nevezzük a $2^p-1$ alakú prímeket. Láttuk Algebra1-ből, hogy ha egy ilyen alakú szám prímszám, akkor $p$ is szükségképpen prím. Most vizsgáljuk meg a Mersenne-prímek és a tökéletes számok kapcsolatát.
 	
 	\begin{theo}
-		Az $n$ páros szám akkor és csak akkor tökéletes, ha $n=2^p\cdot (2^{p+1} - 1)$ alakú, ahol $2^{p+1}-1$ Mersenne-prím.
+		Az $n$ páros szám akkor és csak akkor tökéletes, ha $n=2^{p-1}\cdot (2^p - 1)$ alakú, ahol $2^p-1$ Mersenne-prím.
 	\end{theo}
 
 	\begin{proof}
@@ -3355,7 +3357,7 @@
 	
 	\section{$8k-1$ alakúak}
 	
-	Indirekt fel, hogy csak véges sok $8k-1$ alakú prím van, legyenek ezek $p_1,p_2,\ldots,p_k$. Tekintsük a következő számot:
+	Indirekt tegyük fel, hogy csak véges sok $8k-1$ alakú prím van, legyenek ezek $p_1,p_2,\ldots,p_k$. Tekintsük a következő számot:
 	\[ N = (p_1\cdot \ldots \cdot p_k)^{2} - 2  \]
 	Nyilvánvaló, hogy $N\neq 0,1,-1$, tehát létezik prímtényezős felbontása, legyen ez
 	\[ N = q_1\cdot q_2\cdot \ldots \cdot q_t  \]
@@ -3377,7 +3379,7 @@
 	
 	\section{$8k+3$ alakúak}
 	
-	Indirekt fel, hogy csak véges sok $8k+3$ alakú prím van, legyenek ezek $p_1,p_2,\ldots,p_k$. Tekintsük a következő számot:
+	Indirekt tegyük fel, hogy csak véges sok $8k+3$ alakú prím van, legyenek ezek $p_1,p_2,\ldots,p_k$. Tekintsük a következő számot:
 	\[ N = (p_1\cdot \ldots \cdot p_k)^{2} + 2  \]
 	Nyilvánvaló, hogy $N\neq 0,1,-1$, tehát létezik prímtényezős felbontása, legyen ez
 	\[ N = q_1\cdot q_2\cdot \ldots \cdot q_t  \]

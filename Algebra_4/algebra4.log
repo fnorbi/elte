@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2019.4.9)  3 JUN 2019 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2019.4.9)  2 JUL 2019 02:18
 entering extended mode
 **./algebra4.tex
 (algebra4.tex
@@ -1085,7 +1085,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <szogharmadolas.png, id=683, 370.38374pt x 268.00125pt>
 File: szogharmadolas.png Graphic file (type png)
 <use szogharmadolas.png>
-Package pdftex.def Info: szogharmadolas.png  used on input line 1567.
+Package pdftex.def Info: szogharmadolas.png  used on input line 1569.
 (pdftex.def)             Requested size: 277.78711pt x 201.00043pt.
 
 
@@ -1176,7 +1176,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [58]
-Overfull \hbox (7.19801pt too wide) in paragraph at lines 1982--1983
+Overfull \hbox (7.19801pt too wide) in paragraph at lines 1984--1985
 []\T1/ptm/m/it/12 Megjegyzés. []\T1/ptm/m/n/12 Az $\OT1/ztmcm/m/n/12 (\OML/ztmc
 m/m/it/12 a; p\OT1/ztmcm/m/n/12 ) = 1$ \T1/ptm/m/n/12 fel-té-tel-re azért van s
 zük-ség, hogy be-szél-hes-sünk $\OML/ztmcm/m/it/12 a$ \T1/ptm/m/n/12 rend-jé-r®
@@ -1238,15 +1238,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [66]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2288.
+(hyperref)                removing `math shift' on input line 2290.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 2288.
+(hyperref)                removing `\pi' on input line 2290.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2288.
+(hyperref)                removing `math shift' on input line 2290.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1258,12 +1258,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <abszampar1.png, id=869, 425.33907pt x 422.32782pt>
 File: abszampar1.png Graphic file (type png)
 <use abszampar1.png>
-Package pdftex.def Info: abszampar1.png  used on input line 2304.
+Package pdftex.def Info: abszampar1.png  used on input line 2306.
 (pdftex.def)             Requested size: 200.59084pt x 199.16928pt.
 <abszampar2.png, id=870, 353.06906pt x 360.59718pt>
 File: abszampar2.png Graphic file (type png)
 <use abszampar2.png>
-Package pdftex.def Info: abszampar2.png  used on input line 2312.
+Package pdftex.def Info: abszampar2.png  used on input line 2314.
 (pdftex.def)             Requested size: 222.87106pt x 227.62204pt.
 
 
@@ -1276,10 +1276,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <abszampar3.png, id=879, 392.21532pt x 400.49625pt>
 File: abszampar3.png Graphic file (type png)
 <use abszampar3.png>
-Package pdftex.def Info: abszampar3.png  used on input line 2322.
+Package pdftex.def Info: abszampar3.png  used on input line 2324.
 (pdftex.def)             Requested size: 222.9187pt x 227.62204pt.
 
-Overfull \hbox (5.40337pt too wide) detected at line 2331
+Overfull \hbox (5.40337pt too wide) detected at line 2333
 [] [] \OT1/ztmcm/m/n/12 = [] [] = \OML/ztmcm/m/it/12  \OMS/ztmcm/m/n/12  [] [
 ] \OT1/ztmcm/m/n/12 = \OML/ztmcm/m/it/12  \OMS/ztmcm/m/n/12  \OT1/ztmcm/m/n/1
 2 (1 \OMS/ztmcm/m/n/12   \OT1/ztmcm/m/n/12 0 + 0) = \OML/ztmcm/m/it/12 
@@ -1297,7 +1297,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 9. el\IeC {\H o}ad\IeC {\'a}s.
-LaTeX Font Info:    Try loading font information for U+eus on input line 2377.
+LaTeX Font Info:    Try loading font information for U+eus on input line 2379.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [71
@@ -1306,7 +1306,7 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 <eukl1.png, id=906, 362.10281pt x 301.125pt>
 File: eukl1.png Graphic file (type png)
 <use eukl1.png>
-Package pdftex.def Info: eukl1.png  used on input line 2425.
+Package pdftex.def Info: eukl1.png  used on input line 2427.
 (pdftex.def)             Requested size: 171.0779pt x 142.26378pt.
 
 Underfull \vbox (badness 2443) has occurred while \output is active []
@@ -1322,22 +1322,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <eukl2.png, id=912, 328.22626pt x 285.31593pt>
 File: eukl2.png Graphic file (type png)
 <use eukl2.png>
-Package pdftex.def Info: eukl2.png  used on input line 2429.
+Package pdftex.def Info: eukl2.png  used on input line 2431.
 (pdftex.def)             Requested size: 229.12074pt x 199.16928pt.
 <eukl3.png, id=913, 335.00156pt x 306.39468pt>
 File: eukl3.png Graphic file (type png)
 <use eukl3.png>
-Package pdftex.def Info: eukl3.png  used on input line 2437.
+Package pdftex.def Info: eukl3.png  used on input line 2439.
 (pdftex.def)             Requested size: 124.43423pt x 113.81102pt.
 <eukl4.png, id=914, 325.96782pt x 289.83281pt>
 File: eukl4.png Graphic file (type png)
 <use eukl4.png>
-Package pdftex.def Info: eukl4.png  used on input line 2439.
+Package pdftex.def Info: eukl4.png  used on input line 2441.
 (pdftex.def)             Requested size: 127.99736pt x 113.81102pt.
 <eukl5.png, id=915, 328.97906pt x 289.08pt>
 File: eukl5.png Graphic file (type png)
 <use eukl5.png>
-Package pdftex.def Info: eukl5.png  used on input line 2441.
+Package pdftex.def Info: eukl5.png  used on input line 2443.
 (pdftex.def)             Requested size: 129.5161pt x 113.81102pt.
 
 
@@ -1417,7 +1417,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 2869.
+(amsmath)                 on input line 2871.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1479,7 +1479,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <d(n).png, id=1056, 706.13812pt x 252.945pt>
 File: d(n).png Graphic file (type png)
 <use d(n).png>
-Package pdftex.def Info: d(n).png  used on input line 3076.
+Package pdftex.def Info: d(n).png  used on input line 3078.
 (pdftex.def)             Requested size: 397.15862pt x 142.26378pt.
 [92
 
@@ -1501,7 +1501,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <fak.png, id=1082, 474.27188pt x 391.4625pt>
 File: fak.png Graphic file (type png)
 <use fak.png>
-Package pdftex.def Info: fak.png  used on input line 3185.
+Package pdftex.def Info: fak.png  used on input line 3187.
 (pdftex.def)             Requested size: 206.82765pt x 170.71652pt.
 
 
@@ -1530,97 +1530,97 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [97]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3234.
+(hyperref)                removing `math shift' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\displaystyle' on input line 3234.
+(hyperref)                removing `\displaystyle' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sum@' on input line 3234.
+(hyperref)                removing `\sum@' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\slimits@' on input line 3234.
+(hyperref)                removing `\slimits@' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3234.
+(hyperref)                removing `subscript' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 3234.
+(hyperref)                removing `superscript' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\infty' on input line 3234.
+(hyperref)                removing `\infty' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 3234.
+(hyperref)                removing `\<def>-command' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@tempa' on input line 3234.
+(hyperref)                removing `\@tempa' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 3234.
+(hyperref)                removing `\<def>-command' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@tempb' on input line 3234.
+(hyperref)                removing `\@tempb' on input line 3236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3234.
+(hyperref)                removing `math shift' on input line 3236.
 
 [98
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 3265.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3265.
+(hyperref)                removing `math shift' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\displaystyle' on input line 3265.
+(hyperref)                removing `\displaystyle' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sum@' on input line 3265.
+(hyperref)                removing `\sum@' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\slimits@' on input line 3265.
+(hyperref)                removing `\slimits@' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3265.
+(hyperref)                removing `subscript' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 3265.
+(hyperref)                removing `\<def>-command' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@tempa' on input line 3265.
+(hyperref)                removing `\@tempa' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 3265.
+(hyperref)                removing `\<def>-command' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@tempb' on input line 3265.
+(hyperref)                removing `\@tempb' on input line 3267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3265.
+(hyperref)                removing `math shift' on input line 3267.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1631,11 +1631,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [99]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3300.
+(hyperref)                removing `math shift' on input line 3302.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3300.
+(hyperref)                removing `math shift' on input line 3302.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1646,11 +1646,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [100]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3316.
+(hyperref)                removing `math shift' on input line 3318.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3316.
+(hyperref)                removing `math shift' on input line 3318.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1661,11 +1661,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [101]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3356.
+(hyperref)                removing `math shift' on input line 3358.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3356.
+(hyperref)                removing `math shift' on input line 3358.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1676,11 +1676,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [102]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3378.
+(hyperref)                removing `math shift' on input line 3380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3378.
+(hyperref)                removing `math shift' on input line 3380.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1691,19 +1691,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [103]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3420.
+(hyperref)                removing `math shift' on input line 3422.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mid' on input line 3420.
+(hyperref)                removing `\mid' on input line 3422.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 3420.
+(hyperref)                removing `superscript' on input line 3422.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3420.
+(hyperref)                removing `math shift' on input line 3422.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1714,15 +1714,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [104]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3442.
+(hyperref)                removing `math shift' on input line 3444.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 3442.
+(hyperref)                removing `\pi' on input line 3444.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3442.
+(hyperref)                removing `math shift' on input line 3444.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1733,11 +1733,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [105]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3490.
+(hyperref)                removing `math shift' on input line 3492.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3490.
+(hyperref)                removing `math shift' on input line 3492.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1762,7 +1762,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [108]
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 3542.
+(hyperref)                setting the option has no effect on input line 3544.
 
 Excluding 'comment' comment. [109
 
@@ -1776,7 +1776,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [111] Excluding 'comment' comment.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3659.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3661.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1785,19 +1785,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [112]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3659.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3661.
  (algebra4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3659.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3659.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3661.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3661.
 
 Package rerunfilecheck Info: File `algebra4.out' has not changed.
 (rerunfilecheck)             Checksum: 881DBD914FD891656010E89B88114045;9583.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3659.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3661.
  ) 
 Here is how much of TeX's memory you used:
  13937 strings out of 492973
  197607 string characters out of 3135936
- 301902 words of memory out of 3000000
+ 300902 words of memory out of 3000000
  17135 multiletter control sequences out of 15000+200000
  101086 words of font info for 197 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1908,7 +1908,7 @@ iles/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on algebra4.pdf (116 pages, 925260 bytes).
+Output written on algebra4.pdf (116 pages, 925687 bytes).
 PDF statistics:
  1333 PDF objects out of 1440 (max. 8388607)
  418 named destinations out of 1000 (max. 500000)
