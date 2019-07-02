@@ -1,0 +1,32 @@
+.git rejtett fájl létrehozása jelenlegi mappában:
+git init
+
+státusz lekérdezése:
+git status
+
+A vége nélkül lekérdezzük az aktuálisan beállítottat, a végével beállítja.
+git config --global user.email "farkas.norbert.levente@gmail.com"
+git config --global user.name "fnorbi"
+
+
+clone:
+git clone "http://github.com/fnorbi/elte"
+
+add:
+git add test.txt
+
+commit:
+git commit -m "test"
+
+Összekapcsolás:
+git remote add origin https://github.com/fnorbi/elte.git
+Átállítás:
+git remote set-url --push origin https://github.com/fnorbi/elte.git
+
+pull:
+git pull origin master --allow-unrelated-histories
+
+push:
+git push -u origin master
+vagy simán:
+git push

@@ -1,0 +1,45 @@
+C++:
+
+g++ test.cpp -o test.exe
+test
+
+
+Java:
+
+javac Test.java
+java Test
+
+
+C#:
+
+csc Test.cs
+Test
+
+
+Python:
+
+python test.py
+
+
+
+COMMAND LINE:
+
+test.exe < text.txt
+java test < text.txt
+Test.exe < text.txt
+python test.py < text.txt
+
+
+DOCUMENTATION:
+
+cpp reference
+http://www.cplusplus.com/reference/
+
+java api 8
+https://docs.oracle.com/javase/8/docs/api/
+
+C# reference
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
+
+python reference
+https://docs.python.org/2/c-api/index.html
