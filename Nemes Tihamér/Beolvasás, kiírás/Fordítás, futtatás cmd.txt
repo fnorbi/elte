@@ -1,6 +1,6 @@
 C++:
 
-g++ test.cpp -o test.exe
+g++ -std=c++11 test.cpp -o test.exe
 test
 
 
@@ -43,3 +43,10 @@ https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
 
 python reference
 https://docs.python.org/2/c-api/index.html
+
+
+Python beolvasás: Itt a map a haskell féle hajtogatás, egésszé konvertálja a tömb elemeket.
+szamok = list(map(int, stdin.readline().split()))
+
+
+
