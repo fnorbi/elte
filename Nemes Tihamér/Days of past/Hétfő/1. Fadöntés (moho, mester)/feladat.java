@@ -1,7 +1,7 @@
-import java.util.Scanner;
-//import mester.IO;
+//import java.util.Scanner;
+import mester.IO;
 
-public class Fadontes{
+public class feladat{
     public static final int MAXN = 1000;
 
     public static class Fa{
@@ -13,23 +13,23 @@ public class Fadontes{
     }
 
     public static void main(String[] args) throws Exception{
-        Scanner reader = new Scanner(System.in);
-        //IO io = new IO();
+        //Scanner reader = new Scanner(System.in);
+        IO io = new IO();
 
-        int n = reader.nextInt();
-        //int n = io.nextInt();
+        //int n = reader.nextInt();
+        int n = io.nextInt();
 
         Fa[] adatok = new Fa[MAXN];
 
         for(int i = 0; i < n; i++){
-            int tav = reader.nextInt();
-            int mag = reader.nextInt();
-            //int tav = io.nextInt();
-            //int mag = io.nextInt();
+            //int tav = reader.nextInt();
+            //int mag = reader.nextInt();
+            int tav = io.nextInt();
+            int mag = io.nextInt();
             adatok[i] = new Fa(tav, mag);
         }
 
-        reader.close();
+        //reader.close();
 
         int db = 1; //kidöntendő fák száma, elsőt mindenképp ki kell
         int lastmaxindex = 0; //legtovább elérő kidöntött fa indexe
@@ -62,12 +62,12 @@ public class Fadontes{
             maxi = loki;
         }
 
-        System.out.println(db);
-        System.out.println(maxi + 1);
+        //System.out.println(db);
+        //System.out.println(maxi + 1);
 
-        //io.writeLn(db);
-        //io.writeLn(maxi + 1);
-        //io.close();
+        io.writeLn(db);
+        io.writeLn(maxi + 1);
+        io.close();
 
     }
 }
