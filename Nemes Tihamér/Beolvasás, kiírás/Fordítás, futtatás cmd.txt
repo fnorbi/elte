@@ -50,3 +50,27 @@ szamok = list(map(int, stdin.readline().split()))
 
 
 
+
+
+
+
+Pascal:
+
+fpc test.pas
+test.exe < text.txt
+
+
+
+Codeforces:
+c++ esetén: GNU G++11 5.1.0
+
+
+
+
+
+
+
+
+
+
+
