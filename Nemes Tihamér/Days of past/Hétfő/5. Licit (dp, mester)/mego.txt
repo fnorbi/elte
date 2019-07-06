@@ -1,0 +1,34 @@
+Ebben a megfogalmazásban ez két nyűgös feladat egyben.
+
+1. Egyrészt:
+
+google://weighted interval scheduling
+
+Ezt az algoritmust kellene használnod. Az algoritmus lényege:
+
+- a pályázatokat az utolsó megvásárolni szándékozott parcella sorszáma szerinti növekvő sorrendbe kell rendezni
+- kell csinálni egy segédtömböt, ami azt tartalmazza, hogy az egyes pályázatok esetében melyik az a rendezett sorban őt megelőző utolsó pályázat, amellyel nincs átfedése
+- majd csinálni kell egy tömböt amelyben összegyűjtöd, hogy az elsőtől az adott pályázatig válogatva a pályázatok közül mennyi a maximálisan begyűjthető pénz.
+Ez utóbbi lépés úgy működik, hogy:
+
+- kiindulsz abból, hogy 0 pénzt gyűjtesz be, 0 pályázatot válogatsz be
+- hozzácsapod az első pályázatot, így az első pályázatig X pénzt gyűjtesz be
+- megnézed a következő pályázatot, és:
+    - kikeresed a segédtömbben, hogy mely másik utolsó pályázattal nincs átfedésben
+    - kiszámolod, hogy mennyi lenne a begyűjtött pénz, ha ezzel az átfedésben nem lévő pályázatokból beszedhető maximális pénzhez hozzáadod az ebből a pályázatból beszedhető pénzt
+    - megnézed, hogy mennyi lenne az a pénz, amennyit enélkül a pályázat nélkül, legfeljebb az előző pályázat felhasználásával begyűjthetnél
+    - (ezt mindkettőt ki lehet számolni ennek a tömbnek a korábban kiszámolt elemeiből és a segédtömbből)
+    - a kettő közül a nagyobbat beírod a tömbbe
+- a végén kijön a maximálisan összeszedhető pénz.
+
+
+
+
++1
+Ez a leggyorsabb és legegyszerűbb algoritmus.
+Annyi kiegészítést tennék az 1. részhez, hogy 
+- vagy kell még egy tömb, amiben gyűjtöd, hogy az adott pályázat begyűjtött pénzének kiszámolásához melyik megelőző pályázatot használtad fel. Ezek alapján lehet majd megmondani, hogy mely pályázatok lettek a nyertes pályázatok.
+- vagy kell még egy kis algoritmus, ami visszafelé nézi, hogy az értékek alapján melyek a nyertes pályázatok.
+
+- ha az utolsó pályázat értéke megegyezik az előzőével, akkor ez nem nyertes, nézem az előzőt
+- ha nem egyezik meg, akkor ez nyertes pályázat és az előtte, vele nem átfedésben levővel folytatom a vizsgálatot
