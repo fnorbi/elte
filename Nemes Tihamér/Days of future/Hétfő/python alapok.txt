@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+
+változó, adattípusok (int, string, char, bool, double), round
+beolvasás, kiírás
+aritmetika (+, -) <- konverzió
+if, elif, else <- and, or
+for, while, (break), range <- "bejárós ciklus"
+list, append, extend(list2) #listával bõvít, insert(hova, elem), len(list), .remove(x)
+	reversed(list), .sort(), sorted(list, reverse = True)
+
+split
+mátrix
+függvény, def
+tételek = feladatok
+
+None
+objektumok
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(.count(n) megsz.), (.index(x) kivál.) (max(list) minmax) (sum(list) sum)
