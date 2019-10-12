@@ -1,0 +1,11 @@
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Eml\IeC {\'e}k}{1}{chapter.1}
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Algebrai strukt\IeC {\'u}r\IeC {\'a}k}{1}{section.1.1}
+\select@language {magyar} \contentsline {section}{\numberline {1.2}Norm\IeC {\'a}loszt\IeC {\'o}}{4}{section.1.2}
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Eml\IeC {\'e}k}{8}{chapter.2}
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Faktorcsoport}{8}{section.2.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Direkt szorzat}{11}{section.2.2}
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Csoportelm\IeC {\'e}let}{17}{chapter.3}
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Centraliz\IeC {\'a}tor \IeC {\'e}s centrum}{17}{section.3.1}
+\select@language {magyar} \contentsline {section}{\numberline {3.2}Pr\IeC {\'\i }mek \IeC {\'e}s csoportok}{21}{section.3.2}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}K\IeC {\"u}rsch\IeC {\'a}k feladat}{24}{section.3.3}
+\select@language {magyar} \contentsline {section}{\numberline {3.4}Kism\IeC {\'e}ret\IeC {\H u} csoportok (1-8)}{24}{section.3.4}
