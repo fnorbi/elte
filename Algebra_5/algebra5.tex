@@ -682,8 +682,8 @@
 	Tanultunk korábban a konjugálás műveletéről, jelölésben használtuk $h$-nak a $g$-vel vett konjugáltjára a $g^{-1}\cdot h\cdot g$ jelölést és a $h^g$ jelölést is. Utóbbi a hatványozás művelete miatt megtévesztő lehet, így amennyiben lehetséges én a továbbiakban mellőzöm a használatát.
 	
 	Volt szó arról, hogy a konjugálás ekvivalencia reláció, így osztályokra bontja a $G$ csoportot, ezeket neveztük \textbf{konjugáltosztály}oknak:
-	\[ \mathcal{K}(a) = \{b \in G \mid \exists x\in G\colon x^{-1} \cdot g \cdot x = b  \}  \]
-	vagyis egy $g$ elem konjugáltosztályán azon elemek halmazát értjük, melyekbe "átkonjugálódhat", vagy másképp fogalmazva eljuthat konjugálás által.
+	\[ \mathcal{K}(a) = \{b \in G \mid \exists x\in G\colon x^{-1} \cdot a \cdot x = b  \}  \]
+	vagyis egy $a$ elem konjugáltosztályán azon elemek halmazát értjük, melyekbe "átkonjugálódhat", vagy másképp fogalmazva eljuthat konjugálás által.
 	
 	\begin{defi}
 		Egy $a\in G$ csoportelem \textbf{centralizátor}án azon csoportbeli elemek halmazát értjük, melyekkel $a$ felcserélhető a csoporton definiált szorzás műveletére:
@@ -699,7 +699,7 @@
 		\begin{itemize}
 			\item Nyilván $1\in C_G(a)$ hiszen $1\cdot a = a\cdot 1$ teljesül $\forall a\in G$ esetén.
 			\item Szorzásra zártság: $g,h\in C_G(a)$, vagyis $ga = ag$ és $ha=ah$, kellene $g\cdot h = \in C_G(a)$, vagyis $gh\cdot a = a\cdot gh$ ami nyilván teljesül, hiszen egyesével elvégezve a cseréket $gh\cdot a = g\cdot a \cdot h = a \cdot gh$
-			\item Inverzképzésre zártság: $g\in C_G(a)$, vagyis $ga=ag$ esetén természetesen mindkét oldalról $g^{-1}$-zel szorozva kapjuk, hogy $a\cdot g^{-1} = g^{-1} \cdot a$, ami éppen azt jelenti, hogy $g^{-1}\in C_G(a)$.
+			\item Inverzképzésre zártság: $g\in C_G(a)$, vagyis $ga=ag$ esetén mindkét oldalról $g^{-1}$-zel szorozva kapjuk, hogy $a\cdot g^{-1} = g^{-1} \cdot a$, ami éppen azt jelenti, hogy $g^{-1}\in C_G(a)$.
 		\end{itemize}
 	\end{proof}
 	
@@ -710,7 +710,7 @@
 	\end{theo}
 
 	\begin{proof}
-		Ha már $C_G(a)\leq G$, akkor beszélhetünk a centralizátor jobboldali mellékosztályairól. Könnyen belátható, hogy az egyes jobboldali mellékosztályok elemeinek van egy közös tulajdonsága: mindannyian ugyanoda konjugálják az $a$ elemet. Vagyis $x\in C_G(a)\cdot y$ esetén $x$ és $y$-nal képzett konjugáltja $a$-nak megegyezik.
+		Ha már $C_G(a)\leq G$, akkor beszélhetünk a centralizátor jobboldali mellékosztályairól. Ezeknek van egy közös tulajdonsága:  egy mellékosztályon belül az összes elem ugyanoda konjugálja az $a$ elemet. Vagyis $x\in C_G(a)\cdot y$ esetén $x$ és $y$-nal képzett konjugáltja $a$-nak megegyezik.
 		
 		Ez könnyen látható, hiszen $x\in C_G(a)\cdot y$ esetén $x\cdot y^{-1} \in C_G(a)$, vagyis $x\cdot y^{-1}$ elemmel felcserélhető az $a$ elem, azaz:
 		\[ x\cdot y^{-1} \cdot a = a \cdot x \cdot y^{-1}  \]
@@ -721,7 +721,7 @@
 		Lagrange-tétele alapján a csoport elemszáma megegyezik egy részcsoport elemszámának és azon részcsoport szerinti mellékosztályok számának szorzatával, így: $|\mathcal{K}|\cdot |C_G(a)| = |G|$.
 	\end{proof}
 
-	Ezen utóbbi tétel egy másik megfogalmazása a következő.
+	Ezen utóbbi tétel egy másik megközelítése a következő.
 	
 	\begin{theo}
 		Egy $G$ csoport hat önmagán konjugálással, vagyis $\varphi\colon G\to S_G$ leképezés, melyre $\varphi(g) = \pi\in S_G$, melyre $\pi(h) = g^{-1}\cdot h \cdot g$ permutáció egy homomorfizmus.
@@ -734,11 +734,11 @@
 			\item Szorzástartó: Kellene, hogy $g_1$ és $g_2$ elemek esetén $\varphi(g_1\cdot g_2) = \varphi(g_1) \cdot \varphi(g_2)$. Mit rendel $g_1$-hez $\varphi$? Egy olyan permutációt, amely minden $h$ elemhez a konjugáltját rendeli. Hasonlóan $g_2$ esetében:
 			\[ \varphi(g_1) = h \to g_1^{-1}\cdot h \cdot g_1 \hspace{10mm} \text{és} \hspace{10mm} \varphi(g_2) = h \to g_2^{-1} \cdot \color{red} h \color{black} \cdot g_2  \]
 			Mi lesz ekkor $\varphi(g_1)\cdot \varphi(g_2)$? Egyszerűen az elemekhez rendelt permutációkat is össze kell "szoroznunk", ami permutációk esetén természetesen kompozíciót jelent: az első $h$-t elviszi $g_1^{-1}\cdot h\cdot g_1$-be, majd a második ezt az elemet konjugálja tovább:
-			\[ \varphi(g_1)\cdot \varphi(g_2) = h\to g_1^{-1} \cdot h \cdot g_1 \to g_2^{-1} \cdot \color{red} g_1^{-1} \cdot h \cdot g_1 \color{black} \cdot g_2 = h \to g_2^{-1} \cdot g_1^{-1} \cdot h \cdot g_1 \cdot g_2 \]
+			\[ \varphi(g_1)\cdot \varphi(g_2) = h\stackrel{\varphi(g_1)}{\to} g_1^{-1} \cdot h \cdot g_1 \stackrel{\varphi(g_2)}{\to} g_2^{-1} \cdot \color{red} g_1^{-1} \cdot h \cdot g_1 \color{black} \cdot g_2 = h \to g_2^{-1} \cdot g_1^{-1} \cdot h \cdot g_1 \cdot g_2 \]
 			átírva az inverzet:
-			\[ = (g_1\cdot g_2)^{-1} \cdot h \cdot g_1 \cdot g_2 = \varphi(g_1\cdot g_2)  \]
-			\item Inverztartó: Kellene, hogy $\varphi(g)^{-1} = \varphi(g^{-1})$:
-			\[ \varphi(g)^{-1} = (h\to g^{-1} \cdot h \cdot g)^{-1} = g^{-1} \cdot h \cdot g \to h = h \to g\cdot h \cdot g^{-1}  = \varphi(g^{-1}) \]
+			\[ = h \to (g_1\cdot g_2)^{-1} \cdot h \cdot g_1 \cdot g_2 = \varphi(g_1\cdot g_2)  \]
+			\item Inverztartó: Kellene, hogy $\varphi(g)^{-1} = \varphi\left(g^{-1}\right)$:
+			\[ \varphi(g)^{-1} = \left(h\to g^{-1} \cdot h \cdot g\right)^{-1} = g^{-1} \cdot h \cdot g \to h = h \to g\cdot h \cdot g^{-1}  = \varphi\left(g^{-1}\right) \]
 		\end{itemize}
 		Egy $a$ elem pályáján azon $G$-beli elemeket értettük, ahová $\varphi$ hatás által eljuthat $a$. Vagyis a $g^{-1} \cdot a \cdot g$ elemek halmazát, így ebben az esetben az orbit éppen az $a$ elem konjugáltosztálya lesz: $\mathcal{K}(a)$.
 		
@@ -805,7 +805,7 @@
 		4 & 1 & 2 & 3 \\
 		\end{pmatrix} \]
 		\end{small}
-	    így tehát a $\sigma = 
+	    így tehát a $\pi = 
 		\begin{pmatrix}
 		1 & 2 & 3 & 4 \\
 		\end{pmatrix}$ permutáció centralizátora négy elemű, elemei a lehetséges $\sigma$ permutációk, avagy $
@@ -824,7 +824,7 @@
 			\end{pmatrix}\right)\right|} = \dfrac{24}{6} = 4  \]
 		ahonnan ismét látjuk, hogy $\begin{pmatrix}
 		1 & 2 & 3 & 4 \\
-		\end{pmatrix}$ centralizátorában $4$ elem van csupán, és mivel saját hatványaival mindig felcserélhető, így centralizátora a hatványaiból álló (generált ciklikus) részcsoport $C_{S_4} \left(\begin{pmatrix}
+		\end{pmatrix}$ centralizátorában $4$ elem van csupán, és mivel saját hatványaival minden felcserélhető, így centralizátora a hatványaiból álló (generált ciklikus) részcsoport $C_{S_4} \left(\begin{pmatrix}
 		1 & 2 & 3 & 4 \\
 		\end{pmatrix}\right) = \left \langle \begin{pmatrix}
 		1 & 2 & 3 & 4 \\
@@ -851,8 +851,8 @@
 			\item Egységelem benne van nyilván: $1\in Z(G)$
 			\item Inverzképzésre zárt: $g\in Z(G)$ esetén $\forall h\in G$-re $gh=hg$, vagyis mindkét oldalról $g^{-1}$-zel szorozva $h\cdot g^{-1} = g^{-1} \cdot h$, így $g^{-1} \in Z(G)$.
 			\item Konjugálásra zárt: $g\in Z(G)$ esetén $x^{-1} \cdot g \cdot x \in Z(G)$, hiszen ha $g\in Z(G)$ akkor $gx=xg$, vagyis $x^{-1}\cdot g \cdot x = x^{-1} \cdot x \cdot g = g \in Z(G)$.
-			Megjegyzés: Centrumbeli elemek konjugáltosztálya egyelemű, így mikor azt kérdezzük, hogy $g$ centrumbeli elem összes konjugáltja benne van-e $Z(G)$-ben, akkor nyilvánvalóan igen, hiszen egyetlen konjugáltja önmaga.
 		\end{itemize}
+		Megjegyzés: Centrumbeli elemek konjugáltosztálya egyelemű, így mikor azt kérdezzük, hogy $g$ centrumbeli elem összes konjugáltja benne van-e $Z(G)$-ben, akkor nyilvánvalóan igen, hiszen egyetlen konjugáltja önmaga.
 	\end{proof}
 	
 	\begin{pl}
@@ -864,7 +864,7 @@
 		1 & 2 & 3 & 4 \\
 		\end{pmatrix} \right \rangle$. Ugyanakkor hasonlóan elmondható ez $\begin{pmatrix}
 		1 & 3 & 2 & 4 \\
-		\end{pmatrix}$ ciklussal is, így az általa generált ciklikus csoportnak is részhalmaza a centrum. Igen ám, csakhogy ezen két darab $4$ elemű csoportoknak egyetlen közös eleme az identitás, így $Z(G) = \{id.\}$.
+		\end{pmatrix}$ ciklussal is, így az általa generált ciklikus csoportnak is részhalmaza a centrum. Igen ám, csakhogy ezen két darab $4$ elemű csoportnak egyetlen közös eleme az identitás, így $Z(G) = \{id.\}$.
 	\end{pl}
 
 	\begin{mj}
@@ -879,13 +879,13 @@
 		Így tehát a centrumban biztosan csak fogatások lehetnek. Azok közül is csak különlegesek, hiszen egy $f^n$ forgatás csakis akkor lehet a centrumban, amennyiben egy $t$ tengelyes tükrözéssel felcserélhető, vagyis:
 		\[ t\cdot f^n = f^n \cdot t  \]
 		ugyanakkor tudjuk, hogy $t\cdot f^n = f^{-n} \cdot t$, tehát azt a szükséges feltételt kaptuk\footnote{Ez egyben elégséges feltétel is, hiszen a forgatások felcserélhetők egymással.}, hogy:
-		\[ f^n \cot t = f^{-n} \cdot t  \]
+		\[ f^n \cdot t = f^{-n} \cdot t  \]
 		amelyet $t$-vel egyszerűsítve $f^n = f^{-n}$ feltételhez jutunk, vagyis csakis olyan forgatás felelhet meg nekünk, amely önmaga inverze. Ilyet csak kettőt ismerünk, az identitást és a $180\degree$-os forgatást, vagyis $Z(D_4) = \{id., f^2\}$. %így $f^n$ szögét $\alpha$-val jelölve, az meg kell egyezzen modulo $2\pi$ az $f^{-n}$ forgatás szögével, amely $-\alpha$: $\alpha \equiv \alpha\ (2\pi)$ vagyis $2\cdot \alpha \equiv 0\ (2\pi)$, ahonnan $\alpha \equiv 0\ (\pi)$. Ennek csakis a $\pi$ és $2\pi$ szöggel való elforgatás tesz eleget, vagyis a 
 		
 		Az ötszög szimmetriái esetében annyit változik a problémánk, hogy középpontos tükrözés nincs a diédercsoportban, így $Z(D_5) = \{id.\}$.	\end{pl}
 	
 		\begin{mj}
-			Hasonlóan meggondolva tetszőleges $D_n$ diédercsoport centruma: $Z(D_{2n+1}) = \{id.\} $, illetve $Z(D_{2n}) = \{id., f^n\}$.
+			Hasonlóan meggondolva tetszőleges $D_n$ diédercsoport centruma: $Z(D_{2k+1}) = \{id.\} $, illetve $Z(D_{2k}) = \{id., f^k\}$.
 		\end{mj}
 
 	
@@ -901,30 +901,32 @@
 
 	\begin{proof}
 		Képezzünk $G$ elemeiből rendezett $p$-eseket a következő módon: $(g_1,g_2,\ldots,g_p)$ legyen egy rendezett $p$-es, akkor ha
-		\[ g_1 \cdot g_2 \cdot \ldots g_p = 1  \]
+		\[ g_1 \cdot g_2 \cdot \ldots \cdot g_p = 1  \]
 		Nyilvánvaló, hogy tudunk ilyen elem $p$-est képezni, például $\forall g_i = 1$ számunkra megfelelő.
 		
-		Az is könnyen meghatározható, hogy hány darab ilyet tudunk képezni: tetszőlegesen megválaszthatjuk $G$ elemei közül az első $p-1$ ilyen elemet, melyeket bárhogyan is választunk meg és $a = g_1 \cdot g_2 \cdot \ldots g_{p-1}$ szorzatukat tekintjük, az utolsó $g_p$ elem mindig egyértelműen megválasztható lesz $g_p = a^{-1}$. Éppen ezért annyi ilyen elem $p$-est tudunk készíteni, ahányféleképpen az első $p-1$ elem megválasztható, tehát: $|G|^{p-1}$.
+		Az is könnyen meghatározható, hogy hány darab ilyet tudunk képezni: tetszőlegesen megválaszthatjuk $G$ elemei közül az első $p-1$ ilyen elemet, melyeket bárhogyan is választunk meg és $a = g_1 \cdot g_2 \cdot \ldots \cdot g_{p-1}$ szorzatukat tekintjük, az utolsó $g_p$ elem mindig egyértelműen megválasztható lesz: $g_p = a^{-1}$. Éppen ezért annyi ilyen elem $p$-est tudunk készíteni, ahányféleképpen az első $p-1$ elem megválasztható, tehát: $|G|^{p-1}$.
 		
-		Hasznos észrevétel, hogy ha $(g_1,g_2,\ldots, g_p)$ egy számunkra megfelelő $p$-es volt, akkor jó lesz $(g_2,\ldots, g_p, g_1)$ is, hiszen balról $g_1^{-1}$-el, jobbról $g_1$-vel szorozva:
-		\[ g_1\cdot g_2\cdot \ldots \cdot g_p = 1 \hspace{5mm} \Rightarrow \hspace{5mm} g_2 \cdot \ldots \cdot g_p \cdot g_1 = g_1^{-1} \cdot g_1 = 1  \]
+		Hasznos észrevétel, hogy ha $(g_1,g_2,\ldots, g_p)$ egy számunkra megfelelő $p$-es volt, akkor jó lesz $(g_2,\ldots, g_p, g_1)$ is, hiszen balról $g_1^{-1}$-el, jobbról $g_1$-el szorozva:
+		\[ g_1\cdot g_2\cdot \ldots \cdot g_p = 1 \hspace{5mm} \Rightarrow \hspace{5mm} g_2 \cdot \ldots \cdot g_p \cdot g_1 = g_1^{-1} \cdot 1 \cdot g_1 = 1  \]
 		Ez azt jelenti, hogy egy megfelelő rendezett $p$-est találva egyben annak ciklikus elforgatottjai is jó rendezett $p$-esek. 
 		
 		Hányféle különböző elforgatottja lehet egy rendezett $p$-esnek? Azt állítom, hogy vagy $p$ vagy csak $1$. Amennyiben ugyanis van neki $2$ azonos elforgatottja, akkor könnyen belátható, hogy a rendezett $p$-es minden eleme megegyezik.
 		
 		Például ha $3$-al elforgatva egy rendezett $p$-est önmagát kapjuk, akkor
-		\[ (\color{red} g_1 \color{black}, g_2, g_3, \color{blue} g_4 \color{black}, g_5, g_6, g_7, \ldots, g_p) = (\color{red} g_4 \color{black}, g_5, g_6, \color{blue} g_7 \color{black} \ldots, g_p, g_1, g_2, g_3)  \]
+		\[ (\color{red} g_1 \color{black}, g_2, g_3, \color{blue} g_4 \color{black}, g_5, g_6, g_7, \ldots, g_p) = (\color{red} g_4 \color{black}, g_5, g_6, \color{blue} g_7 \color{black}, \ldots, g_p, g_1, g_2, g_3)  \]
 		$\color{red} g_1 \color{black} = \color{red} g_4 \color{black}$ illetve $\color{blue} g_4 \color{black} = \color{blue} g_7 \color{black}$ és így tovább. Vagyis ha $3$-al elforgatva önmagát kapom akkor minden elem megegyezik az őt követő harmadikkal.
 		
 		NODE! Akkor $a_1$ elemmel megegyezik bármely, tőle $3k$-ra lévő elem, vagyis az összes $3k+1$ indexű elem. Vagyis az $a_1$ elemmel azok az $a_b$ elemek egyeznek meg, melyek esetén tudunk mondani olyan $k$-t, hogy $3k+1 \equiv b\ (p)$. Könnyen látható, hogy ez bármely $b$ esetén teljesül, hiszen $3k\equiv b-1\ (p)$ kongruencia mindig megoldható $k$-ra, mivel $(3,p) = 1$.
 		
-		Ezzel tehát beláttuk, hogy egy rendezett $p$-es minden elforgatottja megegyezik, ha van két azonos eleme. Tehát innentől kezdve két esetet vizsgálunk, amikor a rendezett $p$-es minden eleme azonos, és amikor minden eleme különbözik.
+		%Ezzel tehát beláttuk, hogy egy rendezett $p$-es minden elforgatottja megegyezik, ha van két azonos eleme. Tehát innentől kezdve két esetet vizsgálunk, amikor a rendezett $p$-es minden eleme azonos, és amikor minden eleme különbözik.
 		
-		Vannak olyan $g$ elemek, amelyekből $p$ darabot véve kapunk egy jó rendezett $p$-est melynek minden eleme azonos. Ez éppen azt jelenti, hogy $g^p = 1$. Nem tudjuk hány ilyen elem van, de egy darab biztosan, az $1$. Továbbiakban jelölje $x$ azon $g$ elemek számát melyre teljesül $g^p=1$.
+		Ezzel tehát beláttuk, hogy egy rendezett $p$-es minden eleme megegyezik, ha van két azonos elforgatottja. Tehát innentől kezdve két esetet vizsgálunk, amikor a rendezett $p$-es minden elforgatottja (és így eleme is) azonos, és amikor minden elforgatott különböző.
 		
-		Nézzük egy picit a másik esetet, amikor a rendezett $p$-es minden eleme különbözik. Hány darab ilyen van? Jelöljük ezt mondjuk $y$-al. Ha találunk egy $p$ különböző elemből egy rendezett $p$-est, akkor annak bármely elforgatottja is jó rendezett $p$-es számunkra, tehát ha találunk egy jó, csupa különböző elemből álló rendezett $p$-est, akkor azzal együtt igazából $p$ darabot találtunk egyszerre. Ez azt jelenti, hogy a különböző elemekből álló jó rendezett $p$-esek számát osztja $p$, vagyis: $p\mid y$.
+		Az első esetben vannak olyan $g$ elemek, amelyekből $p$ darabot véve kapunk egy jó rendezett $p$-est melynek minden elforgatottja (és így eleme is) azonos. Ez éppen azt jelenti, hogy $g^p = 1$. Nem tudjuk hány ilyen elem van, de egy darab biztosan, az $1$. Továbbiakban jelölje $x$ azon $g$ elemek számát melyekre teljesül $g^p=1$.
 		
-		Összesen hány jó $p$-es létezik? Kiszámoltuk, hogy $|G|^{p-1}$. De úgy is mondhatnánk, hogy ahány jó csupa azonos, és ahány jó csupa különböző elemű, vagyis
+		Nézzük egy picit a másik esetet, amikor a rendezett $p$-es minden elforgatottja különbözik. Hány darab ilyen van? Jelöljük ezt mondjuk $y$-al. Ha találunk feltételnek megfelelő rendezett $p$-est, akkor igazából  $p$ darabot találtunk egyszerre (elforgatottjaira is igaz, hogy $p$ különböző elforgatottja van). Ez azt jelenti, hogy a csupa különböző elforgatottal rendelkező rendezett $p$-esek számát osztja $p$, vagyis: $p\mid y$.
+		
+		Összesen hány jó $p$-es létezik? Kiszámoltuk, hogy $|G|^{p-1}$. De úgy is mondhatnánk, hogy ahány jó csupa azonos, és ahány jó csupa különböző elforgatottal rendelkező, vagyis
 		\[ |G|^{p-1} = x + y  \]
 		Most használjuk ki a tétel feltételét, hogy $p\mid |G|$, ekkor persze $p\mid |G|^{p-1}$ is teljesül, illetve láttuk, hogy $p\mid y$, így adódik az előbbi egyenletből, hogy $p\mid x$.
 		
@@ -969,7 +971,7 @@
 
 	Érdekes észrevétel, hogy amennyiben $G$ csoport kommutatív, akkor minden elem mindennel felcserélhető, tehát minden elem a centrumban van, így $Z(G) = G$. Mivel $Z(G)$ normálosztó, így tekinthetem $G$-nek a $Z(G)$ szerinti faktorcsoportját, melynek elemszáma:
 	\[ |G/Z(G)| = \dfrac{|G|}{|Z(G)|}  \]
-	vagyis jelen esetben $1$, mégpedig egyetlen eleme $Z(G) = G$. Ekkor persze ez az egyelemű $\{G\}$ csoport ciklikus de ez nem túl izgalmas, mert az $1$ elemű csoportról sok érdekeset nem tudunk megállapítani. Tekintsük helyette azt, amikor $G$ nem kommutatív.
+	vagyis jelen esetben $1$, mégpedig egyetlen eleme $Z(G) = G$. Ekkor persze ez az egyelemű $\{G\}$ csoport ciklikus, de ez nem túl izgalmas, mert az $1$ elemű csoportról sok érdekeset nem tudunk megállapítani. Tekintsük helyette azt, amikor $G$ nem kommutatív.
 
 	\begin{theo}\label{zgNemCikl}
 		Tetszőleges $G$ nemkommutatív csoport esetén $G/Z(G)$ nem ciklikus.
@@ -1006,9 +1008,9 @@
 		Mi lehet egy $(a,b)\in A\times B$ elem rendje? A legkisebb pozitív $k$ egész, melyre $(a,b)^k = (a^k,b^k) = (1,1)$, vagyis melyre $a^k = 1$ és $b^k=1$. Ezek szerint $k$ egy jó kitevő $a$-hoz és $b$-hez is, mivel pedig a rend osztja a jó kitevőket, így $o(a)\mid k$ és $o(b) \mid k$, vagyis $k$-nak éppen a rendek közös többszörösei felelnek meg. Ezek közül pedig a legkisebb, az elemrendek legkisebb közös többszöröse.
 	\end{proof}
 
-	Speciálisan tehát ha $A$ csoportban a legnagyobb elemrend $o(a) = n$, és $B$ csoportban $o(b) = m$, akkor $A\times B$ maximális elemrendje $o(a,b)  =[n,m]$.
+	Speciálisan tehát ha $A$ csoportban a legnagyobb elemrend $o(a) = n$, és $B$ csoportban $o(b) = m$, akkor $A\times B$ maximális elemrendje $o\left((a,b)\right)  =[n,m]$.
 	
-	Még speciálisabb esetként azt is látjuk, hogy $A=\Z_n$ és $B=\Z_m$ választással $\Z_n\times \Z_m$ csoport maximális elemrendje $[n\times m]$.
+	Még speciálisabb esetként azt is látjuk, hogy $A=\Z_n$ és $B=\Z_m$ választással $\Z_n\times \Z_m$ csoport maximális elemrendje $[n, m]$.
 	
 	%És végül amit leggyakrabban fogunk használni, hogy ha az előzőek mellett még $(n,m) = 1$ is teljesül, akkor persze $[n,m] = n\cdot m$, így $(n,m)=1$ esetén $\Z_n\times \Z_m$-ben a maximális elemrend $n\times m$.
 	
@@ -1016,14 +1018,14 @@
 	\[ \Z_{18} \cong \Z_2 \times \Z_{3^2} = \Z_2 \times \Z_9  \]
 	Mi történik akkor, ha $\Z_9$-et tovább szeretném bontani, hiszen $\Z_3\times \Z_3$-nak is $9$ eleme van. Az alaptétel szerint a felbontás a prímhatványok erejéig egyértelmű, így ebben az esetben $p_1^{\alpha_1} = 2$ és $p_2^{\alpha_2} = 3$ és $p_3^{\alpha_3} = 3$ prímhatványokkal a
 	\[ \Z_2 \times \Z_3 \times \Z_3  \]
-	már nem az eddigi $\Z_{18}$ csoport volna. Látható ez abból is, hogy ebben a csoportban nincs $9$ rendű elem, pedig $\Z_{18}$-ban van. Mivel máshogyan a $18$ nem bontható prímhatványokra (sorrendtől és egységszeresektől eltekintve), így izomorfizmus erejéig ez a $2$ darab $18$ elemű Ábel-csoport van.
+	már nem az eddigi $\Z_{18}$ csoport volna. Látható ez abból is, hogy ebben a csoportban nincs $9$ rendű elem, pedig $\Z_{18}$-ban van. Mivel máshogyan a $18$ nem bontható prímhatványok szorzatára (sorrendtől és egységszeresektől eltekintve), így izomorfizmus erejéig ez a $2$ darab $18$ elemű Ábel-csoport van.
 	
 	Mi a tapasztalatunk tehát? Hány darab $n$ elemű Ábel-csoport létezik? Ahányféleképpen $n$-et prímhatványok szorzatára tudjuk bontani. Innen már könnyen látható, hogy például hány $8$ elemű Ábel-csoport van. Mivel a $8$-at csak $8=2^3=2\cdot 2^2 = 2 \cdot 2 \cdot 2$ módon bonthatjuk prímhatványok szorzatára, így izomorfizmus erejéig $3$ darab $8$ elemű Ábel-csoport van:
 	\[ \Z_8 \hspace{5mm} \text{és} \hspace{5mm} \Z_2\times \Z_4 \hspace{5mm} \text{és} \hspace{5mm} \Z_2\times \Z_2 \times \Z_2   \]
 	Ezek valóban nem izomorf csoportok, hiszen \ref{maxrend}. lemma alapján az elsőben $8$, a másodikban $4$, a harmadikban pedig $2$ a maximális elemrend.
 	
-	Most pedig, hogy elméletileg megfelelően előkészítettük ezt a témakört, kezdjük el vizsgálgatni a kis elemszámú csoportokat.
-\begin{comment}
+	Most pedig, hogy megfelelően előkészítettük ezt a témakört, kezdjük el vizsgálgatni a kis elemszámú csoportokat.
+
 	\begin{itemize}
 		\item{1 elemű: Ez nem túl izgalmas, $G=\{1\}$ az egyetlen egyelemű csoport.
 		}
@@ -1039,7 +1041,7 @@
 	\end{theo}
 
 	\begin{proof}
-		Mivel $p>1$, így van $a\neq 1$ elem a csoportban, melynek persze rendje sem $1$ emiatt. Viszont mivel $o(a) \mid p$, így $o(a) = p$ lehet csakis, viszont ekkor $a$-nak $p$ darab különböző hatványa van, melyek mindegyike zártság miatt eleme a csoportnak, így $G=\langle a \rangle$, vagyis $G$ ciklikus, így kommutatív is, tehát $G\cong \Z_p$.
+		Mivel $p>1$, így van $a\neq 1$ elem a csoportban, melynek persze rendje sem $1$ emiatt. Viszont mivel $o(a) \mid p$, így $o(a) = p$ lehet csakis, ekkor pedig $a$-nak $p$ darab különböző hatványa van, melyek mindegyike zártság miatt eleme a csoportnak, így $G=\langle a \rangle$, vagyis $G$ ciklikus, így kommutatív is, tehát $G\cong \Z_p$.
 	\end{proof}
 	
 	Ezzel tehát egyben azt is látjuk, hogy az egyetlen $5$ rendű csoport $\Z_5$, illetve $7$ rendű $\Z_7$.
@@ -1052,7 +1054,7 @@
 				\renewcommand{\arraystretch}{1.5}
 				\begin{tabular}{ | c || c | c | c | c | }
 					\hline
-					$-$ & $1$ & $a$ & $b$ & $c$ \\
+					$\cdot$ & $1$ & $a$ & $b$ & $c$ \\
 					\hline
 					\hline
 					$1$ & $1$ & $a$ & $b$ & $c$ \\
@@ -1068,22 +1070,22 @@
 			Mit írjunk a maradék helyre? Különböztessünk meg $2$ esetet, hogy van-e negyedrendű elem vagy nincs:
 			\begin{itemize}
 				\item{
-					$\exists g\in G$ melyre $o(g) = 4$. Ez egyben azt is jelenti, hogy $g$ generálja az egész csoportot, hiszen $4$ különböző hatványa van, ekkor persze $G=\{1, g, g^2, g^3\} \cong \Z_4$, a Cayley-tábla pedig $a=g$, $b=a^2$ és $c=a^3$ esetén
+					$\exists g\in G$ melyre $o(g) = 4$. Ez egyben azt is jelenti, hogy $g$ generálja az egész csoportot, hiszen $4$ különböző hatványa van, ekkor persze $G=\{1, g, g^2, g^3\} \cong \Z_4$, a Cayley-tábla pedig $a=g$, $b=g^2$ és $c=g^3$ esetén
 					\begin{center}
 						\setlength{\tabcolsep}{0.7em} % for the horizontal padding
 						\renewcommand{\arraystretch}{1.5}
 						\begin{tabular}{ | c || c | c | c | c | }
 							\hline
-							$-$ & $1$ & $a$ & $b$ & $c$ \\
+							$\cdot$ & $1$ & $a$ & $b$ & $c$ \\
 							\hline
 							\hline
-							$1$ & $1$ & $a$ & $a^2$ & $a^3$ \\
+							$1$ & $1$ & $g$ & $g^2$ & $g^3$ \\
 							\hline
-							$a$ & $a$ & $a^2$ & $a^3$ & $1$ \\
+							$a$ & $g$ & $g^2$ & $g^3$ & $1$ \\
 							\hline
-							$b$ & $a^2$ & $a^3$ & $1$ & $a$ \\
+							$b$ & $g^2$ & $g^3$ & $1$ & $g$ \\
 							\hline
-							$c$ & $a^3$ & $1$ & $a$ & $a^2$ \\   
+							$c$ & $g^3$ & $1$ & $g$ & $g^2$ \\   
 							\hline 
 						\end{tabular}
 					\end{center}
@@ -1096,7 +1098,7 @@
 						\renewcommand{\arraystretch}{1.5}
 						\begin{tabular}{ | c || c | c | c | c | }
 							\hline
-							$-$ & $1$ & $a$ & $b$ & $c$ \\
+							$\cdot$ & $1$ & $a$ & $b$ & $c$ \\
 							\hline
 							\hline
 							$1$ & $1$ & $a$ & $b$ & $c$ \\
@@ -1115,7 +1117,7 @@
 						\renewcommand{\arraystretch}{1.5}
 						\begin{tabular}{ | c || c | c | c | c | }
 							\hline
-							$-$ & $1$ & $a$ & $b$ & $c$ \\
+							$\cdot$ & $1$ & $a$ & $b$ & $c$ \\
 							\hline
 							\hline
 							$1$ & $1$ & $a$ & $b$ & $c$ \\
@@ -1131,12 +1133,12 @@
 					Azonban még nem vagyunk készen! Hiszen nem elegendő mutatnunk táblázatot, meg kell mutatnunk, hogy létezik is olyan csoport, melynek számolási szabálya éppen ilyen. Hasznos észrevétel, hogy a táblázat a főátlóra tükrös, ami azt jelenti, hogy kommutatív a csoport. Ekkor viszont egy $4$ elemű kommutatív csoportot keresünk, amelyben nincs $4$-ed rendű elem. Ilyen $\Z_2\times \Z_2$ és mivel a Cayley-tábla egyértelműen befejezhető volt, így nincs is más $4$ elemű csoport.
 				}
 			\end{itemize}
-			Most hogy ezt végigszenvedtük, gondoljuk meg hogy a $4$ elemű csoportokat is le lehetett volna rendezni $2$ mondatban, hiszen minden negyedrendű csoport kommutatív! Ezt onnan látjuk, hogy ha van negyedrendű elem, akkor ciklikus a csoport (ami kommutatív), ha pedig nincs negyedrendű, akkor minden elem legfeljebb másodrendű, de láttuk gyakorlaton, hogy a csoport ekkor is kommutatív.
+			Most, hogy ezt végigszenvedtük, gondoljuk meg, hogy a $4$ elemű csoportokat is le lehetett volna rendezni $2$ mondatban, hiszen minden negyedrendű csoport kommutatív! Ezt onnan látjuk, hogy ha van negyedrendű elem, akkor ciklikus a csoport (ami kommutatív), ha pedig nincs negyedrendű, akkor minden elem legfeljebb másodrendű, de láttuk gyakorlaton, hogy a csoport ekkor is kommutatív.
 			
 			Tehát a kérdés valójában csak annyi, hogy hány $4$ elemű kommutatív csoport van, amit a fejezet elején meggondoltunk még a bonyolultabb $8$ esetére is, hogy $4=2^2=2\cdot 2$ miatt csak kétféleképpen választhatunk prímeket, így izomorfizmus erejéig $\Z_4$ és $\Z_2\times \Z_2$ egyikével megegyezik minden $4$ elemű csoport.
 		}
 		\item{6 elemű:
-			Mivel $2$ és $3$ prímek és $2\mid 6$ és $3 \mid  6$, így Cauchy-tétel szerint egy $6$ elemű $G$ csoportban létezik $2$ és $3$ rendű elem: $\exists g, h\colon o(g) = 3$ és $o(h) = 2$. A \ref{indexnorm}. tétel szerint mivel $|\langle g \rangle| = 3$, így $|G:\langle g \rangle| = 2$, vagyis $\langle g \rangle \triangleleft G$, vagyis $g$ hatványai zártak a konjugálásra.
+			Mivel $2$ és $3$ prímek és $2\mid 6$ és $3 \mid  6$, így Cauchy-tétel szerint egy $6$ elemű $G$ csoportban létezik $2$ és $3$ rendű elem: $\exists g, h\colon o(g) = 3$ és $o(h) = 2$. Mivel $|\langle g \rangle| = 3$, így $|G:\langle g \rangle| = 2$, vagyis a \ref{indexnorm}. tétel szerint $\langle g \rangle \triangleleft G$, vagyis $g$ hatványai zártak a konjugálásra.
 			
 			Tekintsük $h^{-1} \cdot g \cdot h$ elemet. Mivel $\langle g \rangle$ zárt a konjugálásra, így ez csakis neki egyik eleme lehet: $1$ vagy $g$ vagy $g^2$.
 			
@@ -1155,7 +1157,7 @@
 			\begin{itemize}
 				\item Az első lehetőség, hogy van olyan $h$ melyre $o(h) = 2$, ekkor $h^{-1} = h$, vagyis $h^{-1} \cdot g \cdot h$ mi lehet? Mivel $\langle g\rangle $ normálosztó, így ez csak $1, g, g^2$ vagy $g^3$ lehet. Első esetben $g=1$ adódik, de $g$ nem elsőrendű.
 				
-				Tudjuk azt is, hogy elem rendje megegyezik konjugáltjainak rendjével, így $o(h^{-1}\cdot g \cdot h) = o(g) = 1$, ekkor viszont $h^{-1}\cdot g\cdot h \neq g^2$, hiszen utóbbi rendje $o(g^2) = 2$, mivel $o(g) = 1$.
+				Tudjuk azt is, hogy elem rendje megegyezik konjugáltjainak rendjével, ennélfogva $o(h^{-1}\cdot g \cdot h) = o(g) = 4$, ekkor viszont $h^{-1}\cdot g\cdot h \neq g^2$, hiszen utóbbi rendje $o(g^2) = 2$, mivel $o(g) = 4$.
 				
 				Amennyiben $h^{-1} \cdot g \cdot h = g$ akkor $g\cdot h = h \cdot g$ vagyis a csoport kommutatív, azokat már láttuk.
 				
@@ -1179,7 +1181,7 @@
 	%1:16:00 Kürschák
 	
 	%1:22:00
-\begin{comment}
+
 	\chapter{Csoportok és polinomok}
 	\section{Kisméretű csoportok (9-10)}
 	
@@ -1204,10 +1206,10 @@
 		\item 10 elemű: Hasonlóan fogunk eljárni, mint a $6$ eleműek esetében. Cauchy-tétel miatt létezik a csoportban $2$ és $5$-öd rendű elem: $o(g) = 5$ és $o(h) = 2$. Most is mivel $|\langle g \rangle| = 5$, így $|G:\langle g \rangle| = 2$, tehát \ref{indexnorm}. tétel miatt $\langle g \rangle \triangleleft G$, tehát zárt a konjugálásra, így $h^{-1}\cdot g \cdot h \in \langle g \rangle$.
 		\begin{enumerate}
 			\item $h^{-1}\cdot g \cdot h = 1$, ekkor $g=1$, ami nem jó, hiszen $g$ nem elsőrendű.
-			\item $h^{-1}\cdot g \cdot h = g$, ekkor $gh=hg$, vagyis a csoport kommutatív, mivel $10=2\cdot 5$ csak egyféleképpen bontható prímhatványrendű elemek szorzatára, így ekkor $G\cong \Z_2\times \Z_5$.
+			\item $h^{-1}\cdot g \cdot h = g$, ekkor $gh=hg$, vagyis a csoport kommutatív, mivel $10=2\cdot 5$ csak egyféleképpen bontható prímhatványrendű elemek szorzatára, így ekkor szükségképpen $G\cong \Z_2\times \Z_5$.
 			\item $h^{-1}\cdot g \cdot h = g^2$, ekkor mindkét oldalt konjugálva $h$-val:
 			\[ h^{-1} \cdot h^{-1} \cdot g \cdot h \cdot h = h^{-1} \cdot g^2 \cdot h  \]
-			Mivel $o(h) = 2$, így $h^{-1}\cdot h^{-1} = h\cdot h = 1$, illetve a jobboldalon $(h^{-1}\cdot g \cdot h)^2 = h^{-1} \cdot g^2 \cdot h$ miatt:
+			Mivel $o(h) = 2$, így $h^{-1}\cdot h^{-1} = h\cdot h = 1$, illetve a jobboldalt átalakítva $(h^{-1}\cdot g \cdot h)^2 = h^{-1} \cdot g^2 \cdot h$ miatt:
 			\[ g = (h^{-1} \cdot g \cdot h)^2  \]
 			visszaírva ahonnan kiindultunk $h^{-1}\cdot g \cdot h = g^2$-et:
 			\[ g = (g^2)^2 = g^4  \]
@@ -1222,9 +1224,10 @@
 		Izomorfizmus erejéig tehát $2$ darab $10$ elemű csoport létezik: $\Z_2\times \Z_5$ és $D_5$.
 	\end{itemize}
 	
-	
+
 	%18:00
 	\section{Egy komplex probléma}
+\begin{comment}
 	Felbontható-e a természetes számok halmaza számtani sorozatok uniójára? Na ez egy elég pongyolán megfogalmazott kérdés, mi az hogy sorozatok uniója? A sorozat egy speciális függvény, amely a pozitív egész számok halmazáról képez, függvényeknek pedig van értékkészlete, így a továbbiakban sorozatok uniója alatt értékkészleteik unióját értjük.
 	
 	Ez esetben triviális a kérdés: $a_n = n - 1$ egy $d=1$ differenciájú számtani sorozat, vagyis már maga $\N$ is egy számtani sorozat értékkészlete.
@@ -1327,10 +1330,14 @@
 	\begin{mj}
 		Sajnos ebben a bizonyításban még így is maradtak bőven hiányosságok, kérdéses lépések. Például mivel a számtani sorozatok előállítják a természetes számokat, így valóban megkaptam $x$-nek minden hatványát, ugyanakkor nem a "szokásos" sorrendben összegeztem azokat. Megtehetem-e ezt? Egyváltozós analízis 2-ből láttuk, hogy feltételes sor estén a sor átrendezésével más összege is lehet a sornak, miért tehettük akkor ezt most meg? Egyrészt amit be kellene látnunk, hogy a sor abszolút konvergens. Ez szerencsére trivialitás! Ami viszont nem az, hogy abszolút konvergens sort bárhogyan átrendezve a kapott sor konvergenciája és összege nem változik. És akkor olyanokról még nem is beszéltem, hogy miért lesznek azok a határértékek, amik lettek? Ezektől az analízisbeli pontosságoktól most eltekintettünk, ami nem feltétlenül baj, csak tartsuk észben, hogy azért még itt lenne mit meggondolni.
 	\end{mj}
-	
+\end{comment}
 	%55:00
 	\section{Többváltozós polinomok}
 	
+	
+	Ennek a fejezetnek a kidolgozása várhatóan huzamosabb időt fog igénybe venni: \color{red} valószínűleg a szimmetrikus polinomok alaptételének bizonyítása nem fog elkészülni\color{black}. Ennek 2 oka van: egyrészt az előadáson hallottakból nem látom át teljes egészében a bizonyítást (olyanról pedig nincs értelme írnom, amit nem értek), illetve Kiss Emil könyvében elolvasható a témakör, korrektül le van írva, de sajnos nem rövid. Egyelőre akit bármi okból érdekelne ez a bizonyítás, az ott nézze meg. (Maga a fejezet egyes részei el fognak készülni, csak az alaptétel bizonyítása, az indukció nem.)
+	
+		
 	%definíciók: szimmetrikus, elemi, főtag: legnagyobb tag (lexiko) olyan értelemben, hogy ha van ami x_100^{5000} akkor kell legyen x_1^{5000} is, főtag az ahol x_1 kitevője a legnagyobb, ha több ilyen is van ahol x_2-jé, stb... = lexikografikus rendezés szerinti legnagyobb tag (aminek nem 0 az együtthatója)
 	
 	%lexikografikus rendezés: ELŐSZÖR EZT (ez még általános többváltozós polinomra is értelmezhető)
@@ -1340,6 +1347,15 @@
 	
 	%boszorkányos alkalmazás
 	
+	\chapter{Titkosírás}
+	\section{Hatványösszegek} %Szumma szummárum, Összegzés
+	\section{Mozi vagy kirándulás} %kocsma %szabadidős tevékenység, kínai maradéktétel
+	\section{Rivest, Shamir, Adlemann}
+	
+	Az RSA titkosírás több félévünk során is előkerült, értelemszerűen felesleges újra leírnom, amit egyszer már kidolgoztam, előadáson is csak annyi hangzott el, amennyi a tavalyi félévben. Az  \href{http://vasgyura96.web.elte.hu/files/algebra4.pdf}{Algebra4.pdf} jegyzeten kívül egy különálló dokumentumban is elolvasható a témakör, aki nem akar keresgélni: \href{http://vasgyura96.web.elte.hu/files/RSA.pdf}{RSA.pdf}
+	
+	Sok dolgot kicsit máshogy közelítettem meg benne, mint ahogyan a legtöbb szakirodalom, tanár tenné, mert tudom, hogy egy nehéz anyagról van szó, melynek megértésével én is sokat küzdöttem. Éppen ezért a célom (szokásomhoz híven) nem a tömörség volt, hanem az érthetőség.
+	
 	\chapter*{Mellékletek}
 	
 	\markboth{MELLÉKLETEK}{}
@@ -1348,6 +1364,7 @@
 	\setcounter{section}{0}
 	
 	\section{Nem bonyolult, csak komplex}
+\begin{comment}
 	A komplex számok határértékének vizsgálatakor azt állítottam, hogy konvergens komplex sorozatokra is igaz, hogy összeg határértéke a határértékek összege, konstansszoros határértéke a határérték konstans szorosa. Erre nézünk most egy picit részletesebb indoklást, mely valós esethez hasonlóan a háromszög-egyenlőtlenségre fog támaszkodni, de először azt is be kellene látnunk komplex számokra.
 	
 	\begin{theo}[Cauchy-Bunyakovszkij-Schwarz]
